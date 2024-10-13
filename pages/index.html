@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
+    <link rel="stylesheet" href="/stylesheets/all.css">
   </head>
   <body>
     <%- include('./layout/header'); -%>
 
     <h1 class="index-title">我是首頁</h1>
-    <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
-
+    <div>
+      <img src="/assets/images/img_index/lg-service-img.png" style="width: 300px; height: 200px;" alt="">
+      <p class=" h1 text-primary-300 bg-primary-800 mb-6 ">手寫字型測試</p>
+    </div>
+    <button class="btn btn-primary-400">按鈕測試</button>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
