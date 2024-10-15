@@ -1,4 +1,14 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.search-box{
+  display:none;
 }
+.search-active .search-box{
+  display:inline-block;
+}
+.nav-link{
+  display: block;
+}
+//.navbar-main{
+//  @include media-breakpoint-up(){
+//    display: none;
+//  }
+//}
