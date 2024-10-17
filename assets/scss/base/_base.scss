@@ -1,10 +1,37 @@
-img{
-    max-width: 100%;
-    height:auto;
-    vertical-align: bottom;
-}
-
-a{
-    display: inline-block;
+// base
+body {
+    font-family:"Zen Maru Gothic", "Nunito", sans-serif;
+    line-height: 1.5;
+    background: #FDF8EF;
+    font-size: 16px;
+    color: #2B2B2B;
+  }
+  a{
     text-decoration: none;
-}
+    display: inline-block;
+    color: inherit;
+  }
+  a :hover{
+    opacity: 0.7;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+  button {
+    background-color: #FCFCFC;
+    color:#2B2B2B;
+    border: #A8A8A8 solid 1px;
+    cursor: pointer; /* 鼠標指針樣式設為手指形狀 */
+  }
+  button:hover {
+    opacity: 0.7;
+  }
+  button:active{
+    background-color: gray;
+  }  
+  
+  .hand-write{
+    font-family: 'Chenyuluoyan', sans-serif;
+  }
