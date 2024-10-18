@@ -1,4 +1,95 @@
 .footer{
-  background: #69F0AE;
-  font-size: 64px;
+  background: #A56948;
+  font-family: "Zen Maru Gothic", serif;
+  font-size: 16px;
+  color: #FCFCFC;
+  line-height: 1.5;
+  padding: 64px 0;
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+}
+
+.container{
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.mr-8{
+  margin-right: 32px;
+}
+
+.mb-8{
+  margin-bottom: 32px;
+}
+
+.spacebetween{
+  justify-content: space-between;
+}
+
+a{
+  color: #FCFCFC;
+  text-decoration: none;
+}
+
+ul{
+  margin-bottom: 0px;
+}
+
+.footer p{
+  font-family: "Zen Maru Gothic", serif;
+  margin-bottom: 0px;
+}
+
+.pd-tb-2{
+  padding: 8px 0;
+}
+
+.mb-6{
+  margin-bottom: 24px;
+}
+
+.btnstyle{
+  padding: 8px 16px;
+  margin-left: 12px;
+}
+
+.contactinfo{
+  margin-bottom: 12px;
+}
+
+.company-mobile{
+  display: none;
+}
+
+//手機版樣式
+@media (max-width:576px) {
+  .d-flex {
+    flex-direction: column;
+  }
+  .btnstyle{
+    margin-bottom: 12px;
+    margin-left: 0px;
+  }
+  .logowhite{
+    margin-bottom: 32px;
+  }
+  .appicons-mobile{
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .contactinfo{
+    margin-bottom: 4px;
+  }
+  .company{
+    display: none;
+  }
+  .company-mobile{
+    display: block;
+    text-align: center;
+    margin-top: 32px;
+  }
 }
