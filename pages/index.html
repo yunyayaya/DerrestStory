@@ -6,18 +6,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
     <link rel="stylesheet" href="../assets/scss/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-
-    <h1 class="index-title">我是首頁</h1>
-    <div>
-      <img src="/assets/images/img_index/lg-service-img.png" style="width: 300px; height: 200px;" alt="">
-      <p class=" h1 text-primary-300 bg-primary-800 mb-6 ">手寫字型測試</p>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <a href="#">
+            <picture class="swiper-background object-fit-cover">
+              <source srcset="../assets/images/img_index/lg-swiper-img01.png" media="(min-width:576px)">
+              <img src="../assets/images/img_index/md-swiper-img01.png" alt="">
+            </picture>
+          </a>
+          <div class="container swiper-container-md zen-maru" style="background-image: url(../assets/images/img_index/md-swiper-pattern01.png);">
+            <div class="swiper-desc-md">
+              <h3 class="swiper-desc-title-md-p">新品上市</h3>
+              <h2 class="swiper-desc-title-md">莓果酥派</h2>
+              <p class="swiper-desc-content-md">天然莓果，搭配冰淇淋的奇幻組合</p>
+              <a href="#" class="btn btn-primary-700 text-primary-100 rounded-pill">了解更多</a> 
+            </div>            
+          </div>
+          <div class="container swiper-container-lg zen-maru" style="background-image: url(../assets/images/img_index/lg-swiper-pattern01.png);">
+            <div class="swiper-desc-lg w-50">
+              <h2 class="swiper-desc-title-lg">新品上市-莓果酥派</h2>
+              <p class="swiper-desc-content-lg">天然莓果，搭配冰淇淋的奇幻組合</p>
+              <a href="#" class="btn btn-primary-700 rounded-pill text-primary-100 text-center swiper-desc-btn">了解更多</a> 
+            </div>         
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <picture class="swiper-background object-fit-cover">
+              <source srcset="../assets/images/img_index/lg-swiper-img02.png" media="(min-width:576px)">
+              <img src="../assets/images/img_index/md-swiper-img02.png" alt="">
+            </picture>
+          </a>
+          <div class="container swiper-container-md zen-maru" style="background-image: url(../assets/images/img_index/md-swiper-pattern02.png);">
+            <div class="swiper-desc-md">
+              <h3 class="swiper-desc-title-md-p">本月主打</h3>
+              <h2 class="swiper-desc-title-md">十月栗子香</h2>
+              <p class="swiper-desc-content-md">栗子泥藏著秋日的微風，等你來發現</p>
+              <a href="#" class="btn btn-primary-700 text-primary-100 rounded-pill">了解更多</a> 
+            </div>            
+          </div>
+          <div class="container swiper-container-lg-left zen-maru" style="background-image: url(../assets/images/img_index/lg-swiper-pattern02.png);">
+            <div class="swiper-desc-lg-left w-50">
+              <h2 class="swiper-desc-title-lg">本月主打，十月栗子香</h2>
+              <p class="swiper-desc-content-lg">栗子泥藏著秋日的微風，等你來發現</p>
+              <a href="#" class="btn btn-primary-700 rounded-pill text-primary-100 text-center swiper-desc-btn">了解更多</a> 
+            </div>         
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <picture class="swiper-background object-fit-cover">
+              <source srcset="../assets/images/img_index/lg-swiper-img03.png" media="(min-width:576px)">
+              <img src="../assets/images/img_index/md-swiper-img03.png" alt="">
+            </picture>
+          </a>
+          <div class="container swiper-container-md zen-maru" style="background-image: url(../assets/images/img_index/md-swiper-pattern03.png);">
+            <div class="swiper-desc-md">
+              <h3 class="swiper-desc-title-md-p">銷售冠軍</h3>
+              <h2 class="swiper-desc-title-md">馬卡龍蛋糕</h2>
+              <p class="swiper-desc-content-md">每一口，都值得與你最愛的人分享</p>
+              <a href="#" class="btn btn-primary-700 text-primary-100 rounded-pill">了解更多</a> 
+            </div>            
+          </div>
+          <div class="container swiper-container-lg zen-maru" style="background-image: url(../assets/images/img_index/lg-swiper-pattern03.png);">
+            <div class="swiper-desc-lg w-50">
+              <h2 class="swiper-desc-title-lg">銷售冠軍-馬卡龍蛋糕</h2>
+              <p class="swiper-desc-content-lg">每一口，都值得與你最愛的人分享</p>
+              <a href="#" class="btn btn-primary-700 rounded-pill text-primary-100 text-center swiper-desc-btn">了解更多</a> 
+            </div>         
+          </div>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
-    <button class="btn btn-primary-400">按鈕測試</button>
-    <%- include('./layout/footer'); -%>
+    <!-- Top pick -->
+    <div class="section section-top-pick">
+      <div class="section-top-pick-title">
+        <picture class="section-top-pick-background">
+          <source srcset="../assets/images/img_index/lg-top-pick-pattern.png" media="(min-width:992px)">
+          <img src="../assets/images/img_index/md-top-pick-pattern.png" alt="">
+        </picture> 
+        <h2 class="section-top-pick-name">熱門推薦<span class="section-top-pick-name-sub">Top5</span></h2>
+        <picture class="section-top-pick-decoration">
+          <source srcset="../assets/images/img_index/lg-top-pick-icon.png" media="(min-width:992px)">
+          <img src="../assets/images/img_index/md-top-pick-icon.png" alt="">
+        </picture>            
+      </div>
+      <div class="container section-top-pick-content lg-layout">
+        <div class="row d-lg-flex justify-content-between">
+          <div class="col-lg-6 d-flex justify-content-lg-start">  
+            <img src="../assets/images/img_index/lg-top-pick01.png" alt="">
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start">
+            <h3 class="top-pick-title-lg">熔岩蛋糕 (Molten Lava Cake)</h3>
+            <p class="top-pick-desc-lg">熔岩蛋糕是一款充滿驚喜與誘惑的甜點，每一個細節都精心設計，讓人難以抗拒。外表是鬆軟濃郁的巧克力蛋糕，表層微微龜裂，透露出些許神秘感，讓人忍不住想要一探其中的奧秘。當刀叉輕輕劃開那層香甜的外皮，內層熱騰騰的巧克力醬便緩緩流出，如同熔岩般濃稠而香醇，四溢的巧克力香氣瞬間撲鼻而來，為甜點時刻增添了儀式感。</p>
+            <p class="top-pick-desc-lg">這流動的內餡不僅口感絕佳，更是這款甜點的靈魂所在，讓每一口都充滿驚喜與滿足。這是一道讓人無法抗拒的法式經典甜點.</p>
+            <button type="button" class="btn btn-grey-000 text-grey-700 section-top-pick-btn">了解更多</button>
+          </div>        
+        </div>
+        <div class="row d-lg-flex flex-lg-row-reverse lg-layout pt-16">
+          <div class="col-lg-6 d-flex justify-content-lg-end">
+            <img src="../assets/images/img_index/lg-top-pick02.png" alt="">
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start">
+            <h3 class="top-pick-title-lg">冰淇淋泡芙塔 (Profiterole Tower)</h3>
+            <p class="top-pick-desc-lg">冰淇淋泡芙塔是一款極具視覺和口感魅力的法式甜點，猶如藝術品般的精緻造型總能在宴會中成為眾人目光的焦點。由一顆顆精緻小巧的泡芙堆疊而成，層層相疊成塔狀，宛如甜美的迷你塔樓，每一顆泡芙中都暗藏著濃郁的冰淇淋內餡。</p>
+            <p class="top-pick-desc-lg">當你輕輕咬開泡芙那香酥脆口的外殼，裡面冰涼綿密的冰淇淋內餡便隨即融化在舌尖，冰涼的質感瞬間襲來，與泡芙的酥脆形成完美的口感對比，讓人沉醉其中。無論是品味還是擺盤，都為你的聚會增添一份法式優雅。</p>
+            <button type="button" class="btn btn-grey-000 text-grey-700 section-top-pick-btn">了解更多</button>
+          </div>          
+        </div>
+        <div class="row d-lg-flex justify-content-between pt-16">
+          <div class="col-lg-6 d-flex justify-content-lg-start">
+            <img src="../assets/images/img_index/lg-top-pick03.png" alt="">
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start">
+            <h3 class="top-pick-title-lg">森林莓果塔 (Berry Forest Tart)</h3>
+            <p class="top-pick-desc-lg">酥脆的塔皮上鋪滿了細膩香濃的奶油，猶如柔軟的白雲輕覆其上，接著再層層鋪滿新鮮的森林莓果，為這道甜點增添了豐富的視覺與味覺層次。草莓的鮮甜、藍莓的微酸以及覆盆子的果香巧妙融合，隨著每一口的品嚐，在舌尖綻放出如同大自然般的鮮活與清新。</p>
+            <p class="top-pick-desc-lg">當果實的多汁與奶油的香滑在口中交織，宛如在森林中漫步，沐浴著清晨的陽光，感受那微風拂過的輕柔與花草香氣。這是一道讓人無法抗拒的法式經典甜點。</p>
+            <button type="button" class="btn btn-grey-000 text-grey-700 section-top-pick-btn">了解更多</button>
+          </div>        
+        </div>
+        <div class="row d-lg-flex flex-lg-row-reverse lg-layout pt-16">
+          <div class="col-lg-6 d-flex justify-content-lg-end">
+            <img src="../assets/images/img_index/lg-top-pick04.png" alt="">
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start">
+            <h3 class="top-pick-title-lg">黃金酥脆曲奇 (Golden Crunchy Cookies)</h3>
+            <p class="top-pick-desc-lg">這款黃金酥脆曲奇擁有絕妙的口感，外層金黃酥脆，輕輕一咬便能聽到清脆的聲音，內層則保留著鬆軟綿密的質地，每一口都充滿濃郁的奶油香氣與微微的甜味。那種入口即化的感覺，彷彿在舌尖上跳舞般輕盈柔滑，讓人不禁閉上眼睛細細品味。搭配一杯溫熱的牛奶，醇厚的奶香與曲奇的酥脆完美融合，為午茶時光譜寫了一首美妙的樂章。</p>
+            <p class="top-pick-desc-lg">不論是與朋友家人共度的悠閒午後，還是獨自享受的靜謐時刻，這款曲奇都是最佳伴侶。每一口都是酥脆與香濃的雙重享受。</p>
+            <button type="button" class="btn btn-grey-000 text-grey-700 section-top-pick-btn">了解更多</button>
+          </div>          
+        </div>
+        <div class="row d-lg-flex justify-content-between pt-16">
+          <div class="col-lg-6 d-flex justify-content-lg-start">
+            <img src="../assets/images/img_index/lg-top-pick05.png" alt="">
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start">
+            <h3 class="top-pick-title-lg">草莓奶酥 (Strawberry Crumble)</h3>
+            <p class="top-pick-desc-lg">草莓奶酥是一款口感豐富的甜點，將香濃的奶香與草莓的酸甜完美結合。底層鋪滿了新鮮草莓果肉，經過細火慢煮，成為濃郁的草莓餡料，散發出自然的莓果香氣。上層覆蓋著酥脆的奶酥餅皮，入口鬆脆卻不失細膩。當你輕輕用湯匙挖下一口，酥脆的餅皮與滑嫩的草莓餡料在口中交織，層層疊疊的口感令人驚喜，每一口都彷彿是在品味一段甜蜜的旅程。</p>
+            <p class="top-pick-desc-lg">柔和的奶香和鮮嫩的莓果味道，讓人每一口都充滿幸福感，是一道讓人一試成主顧的經典甜品。</p>
+            <button type="button" class="btn btn-grey-000 text-grey-700 section-top-pick-btn">了解更多</button>
+          </div>        
+        </div>
+      </div>
 
+
+  
+    <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../assets/js/index.js"></script>
   </body>
 </html>
