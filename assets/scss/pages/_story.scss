@@ -1,3 +1,121 @@
+//第一個 swiper--star
+body {
+  position: relative;
+  height: 100%;
+}
+.swiper-container {
+  position: relative;
+  max-width: 80%;
+  height: 100%;
+  margin-left: auto; //讓輪播區域靠右
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: calc(17rem - 10px);
+  margin-right: 10px; //slide 間距
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+}
+
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+.swiper-wrapper{
+  position: relative;
+  max-width: 100%;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #623f2b; 
+  z-index: 10; //確保顯示在卡片上 
+  
+}
+
+.swiper-pagination {
+  text-align: center;
+  position: absolute; 
+  bottom: 10px; 
+  width: 100%;  
+  text-align: center; 
+  z-index: 10;  
+}
+
+.swiper-pagination-bullet {
+  background-color: #e4d2c8; 
+  opacity: 0.7; 
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #623f2b; 
+}
+//第一個swiper-end
+
+//主題按鈕區、團隊甜點創作靈感-star
 .ms-40{
   margin-left: 40px;
 }
+.container-sp {
+  max-width: calc(100% - 20px); //預留20p空間，怕有X軸
+  padding-top: 80px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.sp-card-border{
+  border-color: #83543A;
+  border-radius: 50px;
+}
+.cookie-img{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 300px; 
+  height: auto;
+}
+.intro-card{
+  border: none;
+  background-color: #FDF8EF;
+  position: relative;
+  top: -130px; //往上移動 
+  right: -100px; //往右移動
+}
+//主題按鈕區、團隊甜點創作靈感-end
+
+//center-banner-star
+.banner-bg{
+  width: 100vw; //視窗高度100%
+  height: 550px;
+  background-image: url(/assets/images/img_story/lg-banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  
+}
+
+.fs-55{
+  font-size: 55px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
