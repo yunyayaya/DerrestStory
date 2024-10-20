@@ -12,12 +12,6 @@
   align-items: center;
 }
 
-.container{
-  width: 100%;
-  max-width: 1296px;
-  margin: 0 auto;
-}
-
 .mr-8{
   margin-right: 32px;
 }
@@ -40,7 +34,6 @@ ul{
 }
 
 .footer p{
-  font-family: "Zen Maru Gothic", serif;
   margin-bottom: 0px;
 }
 
@@ -52,9 +45,13 @@ ul{
   margin-bottom: 24px;
 }
 
-.btnstyle{
+.btnsize{
   padding: 8px 16px;
-  margin-left: 12px;
+  
+}
+
+.btnmargin{
+  margin-right: 12px;
 }
 
 .contactinfo{
@@ -70,9 +67,9 @@ ul{
   .d-flex {
     flex-direction: column;
   }
-  .btnstyle{
+  .btnmargin{
     margin-bottom: 12px;
-    margin-left: 0px;
+    margin-right: 0px;
   }
   .logowhite{
     margin-bottom: 32px;
@@ -91,5 +88,8 @@ ul{
     display: block;
     text-align: center;
     margin-top: 32px;
+  }
+  .pd-tb-2{
+    padding: 0px;
   }
 }
