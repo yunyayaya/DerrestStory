@@ -6,21 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>about</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <div class="container container-fluid cart">
+    <div class="container container-fluid  cart">
       <div class="cart-head d-flex mt-5 mb-4 fw-bold">
         <h1 class="text-primary-800 ">購物車</h1>
         <h2 class="align-self-end text-primary-800 fw-bold">Cart</h2>
       </div>
     </div>
-    <div class="container container-fluid">
+    <div class="container container-fluid ">
       <div class="row">
       <div class="d-flex cart-main border-bottom pb-3">
         <img class="rounded col-3" src="../assets/images/img_cart/cart_01.jpg" alt="lemon">
-        <div class="d-flex flex-column col-5">
-        <h3 class="text-primary-900 fw-bold ">清爽夏日鳳梨檸檬塔</h3>
+        <div class="d-flex flex-column col-4 me-4 ">
+        <h3 class="text-primary-900 fw-bold align-self-start ">清爽夏日鳳梨檸檬塔</h3>
+        <div class="container container-fluid">
         <div class="d-flex justify-content-between mb-2"> 
         <p class="m-0 align-self-center  text-grey-700">規格</p>
           <div class="dropdown">
@@ -34,12 +36,14 @@
             </ul>
         </div>
         </div>
+      </div>
+      <div class="container container-fluid">
         <div class="d-flex justify-content-between mb-2">
         <p class="m-0 align-self-center  text-grey-700">數量</p>
         <div class="btn-num-group">
-          <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num">Left</button>
+          <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num"><i class="bi bi-dash-lg"></i></button>
           <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num">5</button>
-          <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num">Right</button>
+          <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num"><i class="bi bi-plus"></i></button>
         </div>
         </div>
         <div class="d-flex justify-content-between">
@@ -47,14 +51,16 @@
           <p class="m-0 align-self-end text-grey-700">NT$350</p>
           </div>
         </div>
-        <p class="vector align-self-center">垃圾桶icon</p>
+      </div>
+      <a class="text-primary-900"><i class="bi bi-trash3"></i></a>
         </div>
       </div>
       <div class="row">
-        <div class="d-flex cart-main border-bottom border-grey-200  pb-3">
-          <img class="rounded col-3" src="../assets/images/img_cart/cart_01.jpg" alt="lemon">
-          <div class="d-flex flex-column col-5">
-          <h3 class="text-primary-900 fw-bold ">清爽夏日鳳梨檸檬塔</h3>
+        <div class="d-flex cart-main border-bottom border-grey-200 pb-3 mt-3">
+          <img class="rounded col-3" src="../assets/images/img_cart/cart_02.jpg" alt="lemon">
+          <div class="d-flex flex-column col-4  me-4">
+          <h3 class="text-primary-900 fw-bold align-self-start ">草莓起司蛋糕</h3>
+          <div class="container container-fluid">
           <div class="d-flex justify-content-between mb-2"> 
           <p class="m-0 align-self-center  text-grey-700">規格</p>
             <div class="dropdown">
@@ -68,24 +74,85 @@
               </ul>
           </div>
           </div>
+        </div>
+        <div class="container container-fluid">
           <div class="d-flex justify-content-between mb-2">
           <p class="m-0 align-self-center  text-grey-700">數量</p>
           <div class="btn-num-group">
-            <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num">Left</button>
+            <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num"><i class="bi bi-dash-lg"></i></button>
             <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num">5</button>
-            <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num">Right</button>
+            <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num"><i class="bi bi-plus"></i></button>
           </div>
           </div>
+        </div>
+        <div class="container container-fluid">
           <div class="d-flex justify-content-between">
             <p class="m-0 align-self-center text-grey-700">金額</p>
             <p class="m-0 align-self-end text-grey-700">NT$350</p>
             </div>
           </div>
-          <p class="vector align-self-center">垃圾桶icon</p>
+        </div>
+        <a class="text-primary-900"><i class="bi bi-trash3"></i></a>
           </div>
       </div>
       </div>
     </div>
+    <div class="container container-fluid">
+      <div class="row">
+      <div class="d-flex cart-main border-bottom pb-3 mt-3">
+        <img class="rounded col-3" src="../assets/images/img_cart/cart_03.jpg" alt="lemon">
+        <div class="d-flex flex-column col-4 me-4 ">
+        <h3 class="text-primary-900 fw-bold align-self-start ">提拉米蘇</h3>
+        <div class="container container-fluid">
+        <div class="d-flex justify-content-between mb-2"> 
+        <p class="m-0 align-self-center  text-grey-700">規格</p>
+          <div class="dropdown">
+            <button class="btn btn-grey-000 btn-outline-grey-400 text-primary-900 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              選擇規格
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item  text-primary-900" href="#">切片</a></li>
+              <li><a class="dropdown-item  text-primary-900" href="#">整塊</a></li>
+              <li><a class="dropdown-item  text-primary-900" href="#">禮盒</a></li>
+            </ul>
+        </div>
+        </div>
+      </div>
+      <div class="container container-fluid">
+        <div class="d-flex justify-content-between mb-2">
+        <p class="m-0 align-self-center  text-grey-700">數量</p>
+        <div class="btn-num-group">
+          <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num"><i class="bi bi-dash-lg"></i></button>
+          <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num">5</button>
+          <button type="button" class="btn btn-grey-000 btn-outline-grey-400 text-grey-700 btn-num"><i class="bi bi-plus"></i></button>
+        </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="m-0 align-self-center text-grey-700">金額</p>
+          <p class="m-0 align-self-end text-grey-700">NT$350</p>
+          </div>
+        </div>
+      </div>
+      <a class="text-primary-900"><i class="bi bi-trash3"></i></a>
+        </div>
+      </div>
+      <div class="container container-fluid">
+      <div class="d-flex flex-column col-8 mt-4 pb-4 border-bottom">
+        <div class="container container-fluid">
+      <div class="d-flex justify-content-between">
+        <p class="m-0 align-self-center text-primary-900 fs-5 ">運費</p>
+        <p class="m-0 align-self-end text-secondary-800 fs-5">NT$100</p>
+        </div>
+      </div>
+      <div class="container container-fluid">
+        <div class="d-flex justify-content-between">
+          <p class="m-0 align-self-center text-primary-900 fs-4 ">金額總計</p>
+          <p class="m-0 align-self-end text-secondary-800 fs-2">NT$2500</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      1233
       <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
