@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="../assets/scss/all.css">
   <!-- Swiper CDN  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
 
 <body>
   <%- include('./layout/header'); -%>
+  <!-- 主題按鈕區開始 -->
     <div class="container-fluid bg-secondary-600 ">
       <div class="d-flex justify-content-center py-4 ">
         <button type="button" class="btn btn-grey-000 ms-40 d-flex align-items-center">
@@ -27,8 +27,114 @@
           <span>主題專欄</span>
         </button>
       </div>
+    </div>
+    <!-- 主題按鈕區結束 -->
 
-  <!-- <%- include('./layout/footer'); -%> -->
-  <script type="module" src="../main.js"></script>      
+    <!-- 團隊甜點創作靈感-輪播1開始 -->
+    <section class="container-sp d-flex ">
+
+      <img src="/assets/images/img_story/cookie1-1.png" alt="cookie-img" class="cookie-img">
+      <div>
+      <div class="card intro-card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title text-primary-800">團隊甜點創作靈感</h5>
+          <p class="card-text text-primary-800">甜點有時候不只是食物，它是我們記憶的延續，是愛與溫暖的載體。</p>
+          <a href="#" class="btn btn-primary-900">進入創作專欄</a>
+        </div>
+      </div>
+      </div>
+      
+      <!-- 輪播區塊 -->
+      <div class="container-fluid"> <!--Slider main container -->
+      <div class="swiper-container swiper-control"><!-- swiper-container是外層容器 swiper-control是讓它會動的控制器，分開寫 -->
+
+        <div class="swiper-wrapper"><!-- Additional required wrapper -->
+          <!-- 第一張輪播卡片 -->
+          <div class="swiper-slide">
+          <div class="card sp-card-border" style="width: 18rem;">
+            <img src="/assets/images/img_story/lg-creative-card1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          </div>
+          <!-- 第二張輪播卡片 -->
+          <div class="swiper-slide">
+          <div class="card sp-card-border" style="width: 18rem;">
+            <img src="/assets/images/img_story/lg-creative-card2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          </div>
+          <!-- 第三章輪播卡片 -->
+          <div class="swiper-slide">
+            <div class="card sp-card-border" style="width: 18rem;">
+              <img src="/assets/images/img_story/lg-creative-card3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+           
+        </div>
+
+        <div class="swiper-button-prev btn-primary-900"></div>
+        <div class="swiper-button-next btn-primary-900"></div>
+        
+      </div> 
+      
+      <div class="swiper-pagination btn-primary-900"></div>
+      
+    </section>
+    <!-- 團隊甜點創作靈感-輪播1結束 -->
+
+    <!-- center-banner-star -->
+    <div class="banner-bg pt-4">
+      <div>
+        <h1 class="fs-55 text-center hand-write text-primary-100">「甜點故事專欄」</h1>
+        <h1 class="fs-55 text-center hand-write text-primary-100">每一道甜點背後都藏著一段獨特而動人的故事</h1>
+        <p class="text-center text-primary-100">無論是傳統家鄉的古老配方，還是靈感突現的新奇創意，這些故事都構成了我們甜點的靈魂，<br/>在這裡你將探索我們精心挑選的甜點背後故事。</p>
+      </div>
+    </div> 
+    <!-- center-banner-end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <%- include('./layout/footer'); -%>
+  <script type="module" src="../main.js"></script>
+  <!-- Swiper JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- 導入自己創建的JS檔案 -->
+  <script src="/assets/js/story.js"></script>      
 </body>
 </html>
