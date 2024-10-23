@@ -1,0 +1,136 @@
+
+.card-feedback{
+    padding: 24px;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    align-items: center;
+}
+
+.card-name{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.card-date{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.card-text{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.card-feedback img{
+    max-width: 80px;
+    max-height:80px;
+    
+}
+
+.feedback-title{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 112px;
+}
+
+.feedback-title span{
+    font-family: "Nunito", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.feedback-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.feedback{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.card-img-mb{
+    display: none;
+}
+
+.card-title{
+    margin-bottom: 4px;
+    align-items: center;
+}
+
+//平板樣式
+  @media (max-width:768px) {
+    .feedback{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .feedback-title{
+        margin-bottom: 40px;
+    }
+
+    .card-feedback img{
+        max-width: 40px;
+        max-height: 40px;
+    }
+    
+    .card-img{
+        display: none;
+    }
+
+    .card-img-mb{
+        display: block;
+    }
+
+    .card-name{
+        margin-left: 16px;
+    }
+
+    .card-title{
+        margin-bottom: 16px;
+    }
+
+    .card-title-mb{
+        align-items: center;
+    }
+  }
+
+  
+//手機版樣式
+// @media (max-width:576px) {
+//     .feedback{
+//         padding-top: 80px;
+//         padding-bottom: 80px;
+//     }
+//     .feedback-title{
+//         margin-bottom: 40px;
+//     }
+
+//     .card-feedback img{
+//         max-width: 40px;
+//         max-height: 40px;
+//     }
+
+//     .card-img{
+//         display: none;
+//     }
+
+//     .card-img-mb{
+//         display: block;
+//     }
+
+//     .card-name{
+//         margin-left: 16px;
+//     }
+
+//     .card-title{
+//         margin-bottom: 16px;
+//     }
+
+//     .card-title-mb{
+//         align-items: center;
+//     }
+//   }
