@@ -5,6 +5,16 @@
 
 //專題主要字形：中英
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+//文字大小RWD
+$utilities: map-merge(
+   $utilities,(
+     "font-size":map-merge(
+     map-get($utilities, "font-size"),
+     ( responsive: true ),
+     ),
+   )
+);
+@import "bootstrap/scss/utilities/api";
 //手寫字形
 @import'/assets/scss/fonts/fonts';
 //icon

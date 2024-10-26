@@ -13,4 +13,22 @@ const swiper = new Swiper('.swiper', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
-  });
+});
+
+
+const sectionTopPickSwiper = new Swiper(".section-top-pick-swiper-container", {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  loop: true,
+  pagination: {
+    el: ".section-top-pick-swiper-pagination",
+    clickable: true, 
+  },
+  navigation: {
+    nextEl: '.section-top-pick-swiper-button-next',
+    prevEl: '.section-top-pick-swiper-button-prev',
+  },
+  autoHeight: true,
+  watchOverflow: true,
+});
+   
