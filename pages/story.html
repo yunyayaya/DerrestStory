@@ -13,7 +13,7 @@
   <%- include('./layout/header'); -%>
 
   <!-- 主題按鈕區開始 -->
-    <div class="container-fluid bg-secondary-600 d-none d-xl-block d-sm-block ">
+  <nav class="container-fluid bg-secondary-600 d-none d-xl-block d-sm-block ">
       <div class="d-flex justify-content-center py-4 container" style="gap: 40px;">
         <button type="button" class="btn btn-grey-000">
           <img src="/assets/images/img_story/icon-sparkle.png" alt="" class="me-3">
@@ -28,103 +28,213 @@
           <span>主題專欄</span>
         </button>
       </div>
-    </div>
-    <!-- 主題按鈕區結束 -->
-
-    <!-- 團隊甜點創作靈感-輪播1開始 -->
+  </nav>
+  <!-- 主題按鈕區結束 -->
+  <!-- 團隊甜點創作靈感區塊-->
   <section class="inspiration-bg">
-    <div class="inspiration-box position-r d-flex flex-md-nowrap flex-wrap" >
+    <div class="inspiration-container position-r d-flex flex-md-nowrap flex-wrap" >
       <picture>
-        <!-- 當螢幕寬度少於600px時，替換圖片 -->
         <source srcset="/assets/images/img_story/cookie1-2.png" media="(max-width: 576px)">
-        <!-- 預設圖片，通常是桌面版本 -->
-        <img src="/assets/images/img_story/cookie1.png" alt="cookie-img" class="cookie-img">
+        <img src="/assets/images/img_story/cookie1.png" alt="cookie-img" class="cookie-img1">
       </picture>
 
       <div class="container-fluid">
-        <div class="intro-card card ">
+        <div class="intro-card ">
           <div class="card-body ">
-            <h5 class="card-title text-primary-800 fs-1 mb-4">團隊甜點創作靈感</h5>
+            <h5 class="card-title text-primary-800 fs-1 mb-4 ">團隊甜點創作靈感</h5>
             <p class="card-text text-primary-800 fs-5 mb-5 ">甜點有時候不只是食物，它是我們記憶的延續，是愛與溫暖的載體。</p>
             <a href="#" class="btn btn-primary-900 btn-md">進入創作專欄</a>
           </div>
         </div>
       </div> 
-      
-      <!-- 輪播區塊 -->
-      <!-- Slider main container / swiper-container最外層容器 -->
-      <div class="swiper-container"> 
-
-        <!-- insp-swiper是讓它會動的控制器，跟container分開寫 -->
-        <div class="insp-swiper">
-
-          <!-- Additional required wrapper -->
+      <!-- 輪播 -->
+      <div class="inspiration-swiper"> 
+        <div class="swiper-container insp-swiper-control">
           <div class="swiper-wrapper">
             <!-- 第一張輪播卡片 -->
-            <div class="swiper-slide">
-            <div class="card sp-card">
-              <img src="/assets/images/img_story/lg-creative-card1.png" class="card-img-top" alt="card-img">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+              <div class="swiper-slide">
+              <div class="card insp-swiper-card-container">
+                <img src="/assets/images/img_story/lg-creative-card1.png" alt="輪播圖1" class="card-img-top" >
+                <div class="card-body insp-swiper-card-body">
+                  <span class="insp-swiper-cards-tag rounded-pill">團隊甜點創作靈感</span>
+                  <h4 class="card-title py-3 ">從家傳秘方到創新美味的轉變</h4>
+                  <div class=" fs-6 mb-2 d-flex align-items-center">
+                    <img src="/assets/images/img_story/customerA.png" alt="" class="writer-img">
+                    <span class="writer-name">Courtney</span>
+                    <span class="writer-date ms-auto">2024/11/03</span>
+                  </div>
+                  <p class="card-text insp-swiper-card-text fs-6">甜點不僅是舌尖上的享受，更是一段段動人的情感故事。在這個專欄中，我們將為你細細講述那些隱藏在甜點背後的故事與情感，從愛情的巧克力慕斯到充滿兒時回憶的奶酪蛋糕，每一篇文章都是一首為甜點而作的詩歌，讓甜點與情感完美交織</p>
+                  <div class="section-dessert-story-cards-article text-end">
+                    <a href="" class=" fs-6 text-end text-primary-900">閱讀全文 <span><i class="bi bi-arrow-right-circle-fill"></i></span></a>
+                  </div>
+                </div>
               </div>
-            </div>
-            </div> 
-            <!-- 第二張輪播卡片 -->
-            <div class="swiper-slide"> 
-            <div class="card sp-card">
-              <img src="/assets/images/img_story/lg-creative-card2.png" class="card-img-top" alt="card-img">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div> 
+              <!-- 第二張輪播卡片 -->
+              <div class="swiper-slide"> 
+              <div class="card insp-swiper-card-container">
+                <img src="/assets/images/img_story/lg-creative-card2.png" alt="輪播圖2" class="card-img-top" >
+                <div class="card-body insp-swiper-card-body">
+                  <span class="insp-swiper-cards-tag rounded-pill">團隊甜點創作靈感</span>
+                  <h4 class="card-title py-3 ">翻開舊食譜,尋找新靈感的旅程</h4>
+                  <div class=" fs-6 mb-2 d-flex align-items-center">
+                    <img src="/assets/images/img_story/customerB.png" alt="" class="writer-img">
+                    <span class="writer-name">Irma</span>
+                    <span class="writer-date ms-auto">2024/11/03</span>
+                  </div>
+                  <p class="card-text insp-swiper-card-text fs-6">穿越時光，品味甜蜜。這個專欄帶你探索從經典法式甜點到現代創意甜品的轉變過程，揭開每道甜點背後的歷史與故事。無論是歷久不衰的拿破崙千層酥，還是帶著創新風味的草莓奶油泡芙，每一道甜品都充滿著動人的故事與傳統的韻味。</p>
+                  <div class="section-dessert-story-cards-article text-end">
+                    <a href="" class=" fs-6 text-end text-primary-900">閱讀全文 <span><i class="bi bi-arrow-right-circle-fill"></i></span></a>
+                  </div>
+                </div>
               </div>
-            </div>
-            </div> 
-            <!-- 第三章輪播卡片 -->
-            <div class="swiper-slide">
-              <div class="card sp-card">
-                <img src="/assets/images/img_story/lg-creative-card3.png" class="card-img-top" alt="card-img">
-                <div class="card-body card-body-md">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div> 
+              <!-- 第三章輪播卡片 -->
+              <div class="swiper-slide">
+                <div class="card insp-swiper-card-container">
+                  <img src="/assets/images/img_story/lg-creative-card3.png" alt="輪播圖片3" class="card-img-top" >
+                  <div class="card-body insp-swiper-card-body">
+                    <span class="insp-swiper-cards-tag rounded-pill">團隊甜點創作靈感</span>
+                    <h4 class="card-title py-3 ">甜點潮流誌：創新美味的極致探索</h4>
+                    <div class=" fs-6 mb-2 d-flex align-items-center">
+                      <img src="/assets/images/img_story/customerC.png" alt="" class="writer-img">
+                      <span class="writer-name">Brandie</span>
+                      <span class="writer-date ms-auto">2024/11/03</span>
+                    </div>
+                    <p class="card-text insp-swiper-card-text fs-6">與我們一起探索甜點世界的最新潮流與風尚！在這個專欄中，我們將介紹世界各地最前衛的甜點創作，從分子料理的魔法變幻，到令人驚艷的健康甜品配方，帶你發現甜點藝術的無限可能。無論你是甜點愛好者還是創作高手，這裡將激發你無窮的創作靈感與味蕾的冒險精神。</p>
+                    <div class="section-dessert-story-cards-article text-end">
+                      <a href="" class=" fs-6 text-end text-primary-900">閱讀全文 <span><i class="bi bi-arrow-right-circle-fill"></i></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 第四張輪播卡片 -->
+              <div class="swiper-slide">
+                <div class="card insp-swiper-card-container">
+                  <img src="/assets/images/img_story/lg-story-card2.png" alt="輪播圖片4" class="card-img-top" >
+                  <div class="card-body insp-swiper-card-body">
+                    <span class="insp-swiper-cards-tag rounded-pill">團隊甜點創作靈感</span>
+                    <h4 class="card-title py-3 ">從家傳秘方到創新美味的轉變</h4>
+                    <div class=" fs-6 mb-2 d-flex align-items-center">
+                      <img src="/assets/images/img_story/customerD.png" alt="" class="writer-img">
+                      <span class="writer-name">Sherlock</span>
+                      <span class="writer-date ms-auto">2024/11/03</span>
+                    </div>
+                    <p class="card-text insp-swiper-card-text fs-6">甜點不僅是舌尖上的享受，更是一段段動人的情感故事。在這個專欄中，我們將為你細細講述那些隱藏在甜點背後的故事與情感，從愛情的巧克力慕斯到充滿兒時回憶的奶酪蛋糕，每一篇文章都是一首為甜點而作的詩歌，讓甜點與情感完美交織</p>
+                    <div class="section-dessert-story-cards-article text-end">
+                      <a href="" class=" fs-6 text-end text-primary-900">閱讀全文 <span><i class="bi bi-arrow-right-circle-fill"></i></span></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- 第四張輪播卡片 -->
-            <div class="swiper-slide">
-              <div class="card sp-card">
-                <img src="/assets/images/img_story/lg-story-card2.png" class="card-img-top" alt="card-img">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            
           </div>
-
-          <div class="swiper-button-prev btn-primary-900"></div>
-          <div class="swiper-button-next btn-primary-900"></div>
-          <div class="swiper-pagination btn-primary-900"></div>
-        </div> 
+          <div class="swiper-button-prev btn-primary-900 d-none d-xl-block"></div>
+          <div class="swiper-button-next btn-primary-900 d-none d-xl-block"></div>
+          <div class="swiper-pagination btn-primary-900 d-none d-xl-block"></div>
+        </div>
       </div>
-      
     </div> 
   </section>
- 
-    <div class="banner-bg pt-4">
+  <!-- center-banner -->
+  <div class="banner-bg pt-4">
       <div>
         <h1 class="fs-55 text-center hand-write text-primary-100">「甜點故事專欄」</h1>
         <h1 class="fs-55 text-center hand-write text-primary-100">每一道甜點背後都藏著一段獨特而動人的故事</h1>
         <p class="text-center text-primary-100">無論是傳統家鄉的古老配方，還是靈感突現的新奇創意，這些故事都構成了我們甜點的靈魂，<br/>在這裡你將探索我們精心挑選的甜點背後故事。</p>
       </div>
+  </div> 
+
+<!-- 顧客甜點故事投稿區塊 -->
+<section class="">
+  <div class="customer-submit-container position-r d-flex flex-md-nowrap flex-wrap" >
+    <!-- background-cookie-img -->
+    <img src="/assets/images/img_story/cookie2.png" alt="" class="cookie-img2">
+    <!-- customers-submit-swiper -->
+    <div class="customer-submit-swiper"> 
+      <div class="swiper-container customer-submit-swiper-control">
+        <div class="swiper-wrapper">
+          <!-- 第一張輪播卡片 -->
+          <div class="swiper-slide">
+            <div class="card customer-submit-card-container">
+              <img src="/assets/images/img_story/lg-story-card1.png" alt="輪播圖1" class="card-img-top" >
+              <div class="card-body submit-swiper-card-body">
+                <span class="submit-swiper-cards-tag rounded-pill">顧客甜點故事投稿</span>
+                <h4 class="card-title py-3 ">從家傳秘方到創新美味的轉變</h4>
+                <div class=" fs-6 mb-2 d-flex align-items-center">
+                  <img src="/assets/images/img_story/customerA.png" alt="" class="writer-img">
+                  <span class="writer-name">Courtney</span>
+                  <span class="writer-date ms-auto">2024/11/03</span>
+                </div>
+                <p class="card-text submit-swiper-card-text fs-6">甜點不僅是舌尖上的享受，更是一段段動人的情感故事。在這個專欄中，我們將為你細細講述那些隱藏在甜點背後的故事與情感，從愛情的巧克力慕斯到充滿兒時回憶的奶酪蛋糕，每一篇文章都是一首為甜點而作的詩歌，讓甜點與情感完美交織</p>
+                <div class="section-dessert-story-cards-article text-end">
+                  <a href="" class=" fs-6 text-end text-primary-900">閱讀全文<span><i class="bi bi-arrow-right-circle-fill"></i></span></a>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          <!-- 第二張輪播卡片 -->
+          <div class="swiper-slide"> 
+            <div class="card customer-submit-card-container">
+              <img src="/assets/images/img_story/lg-story-card2.png" alt="輪播圖2" class="card-img-top" >
+              <div class="card-body submit-swiper-card-body">
+                <span class="submit-swiper-cards-tag rounded-pill">顧客甜點故事投稿</span>
+                <h4 class="card-title py-3 ">翻開舊食譜,尋找新靈感的旅程</h4>
+                <div class=" fs-6 mb-2 d-flex align-items-center">
+                  <img src="/assets/images/img_story/customerB.png" alt="" class="writer-img">
+                  <span class="writer-name">Irma</span>
+                  <span class="writer-date ms-auto">2024/11/03</span>
+                </div>
+                <p class="card-text submit-swiper-card-text fs-6">穿越時光，品味甜蜜。這個專欄帶你探索從經典法式甜點到現代創意甜品的轉變過程，揭開每道甜點背後的歷史與故事。無論是歷久不衰的拿破崙千層酥，還是帶著創新風味的草莓奶油泡芙，每一道甜品都充滿著動人的故事與傳統的韻味。</p>
+                <div class="section-dessert-story-cards-article text-end">
+                  <a href="" class=" fs-6 text-end text-primary-900">閱讀全文 <span><i class="bi bi-arrow-right-circle-fill"></i></span></a>
+                </div>
+              </div>
+            </div>
+          </div> 
+              <!-- 第三張輪播卡片 -->
+              <div class="swiper-slide">
+                <div class="card insp-swiper-card-container">
+                  <img src="/assets/images/img_story/lg-story-card3.png" alt="輪播圖片4" class="card-img-top" >
+                  <div class="card-body insp-swiper-card-body">
+                    <span class="insp-swiper-cards-tag rounded-pill">顧客甜點故事投稿</span>
+                    <h4 class="card-title py-3 ">甜點潮流誌：創新美味的極致探索</h4>
+                    <div class=" fs-6 mb-2 d-flex align-items-center">
+                      <img src="/assets/images/img_story/customerD.png" alt="" class="writer-img">
+                      <span class="writer-name">Sherlock</span>
+                      <span class="writer-date ms-auto">2024/11/03</span>
+                    </div>
+                    <p class="card-text insp-swiper-card-text fs-6">與我們一起探索甜點世界的最新潮流與風尚！在這個專欄中，我們將介紹世界各地最前衛的甜點創作，從分子料理的魔法變幻，到令人驚艷的健康甜品配方，帶你發現甜點藝術的無限可能。無論你是甜點愛好者還是創作高手，</p>
+                    <div class="section-dessert-story-cards-article text-end">
+                      <a href="" class=" fs-6 text-end text-primary-900">閱讀全文 <span><i class="bi bi-arrow-right-circle-fill"></i></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-button-prev btn-primary-900 d-none d-xl-block"></div>
+            <div class="swiper-button-next btn-primary-900 d-none d-xl-block"></div>
+            <div class="swiper-pagination btn-primary-900 d-none d-xl-block"></div>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <!-- customer-submit-title-card -->
+    <div class="container-fluid">
+      <div class="intro-card ">
+        <div class="card-body ">
+          <h5 class="card-title text-primary-800 fs-1 mb-4 ">顧客甜點故事投稿</h5>
+          <p class="card-text text-primary-800 fs-5 mb-5 ">誠摯邀請您分享您與甜點之間的故事。</br>您的珍貴回憶，將成為我們下一篇甜點故事的靈感來源。</p>
+          <a href="#" class="btn btn-primary-900 btn-md">我想投稿</a>
+          <a href="#" class="btn btn-grey-000 btn-md">進入創作專欄</a>
+        </div>
+      </div>
     </div> 
-    
- 
+  
+  </div> 
+</section>
+
 
   <%- include('./layout/footer'); -%>
   <script type="module" src="../main.js"></script>

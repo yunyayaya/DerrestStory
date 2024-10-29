@@ -1,70 +1,65 @@
-
 //團隊甜點創作靈感背景，為了控制餅乾圖拉出來特別寫
 .inspiration-bg {
   position: relative;
   width: 100%; 
   overflow: hidden; //隱藏超出區塊的餅乾圖片
-
 }
-//為了把背景跟容器分開，另外再開一個最外層container
-.inspiration-box{
+.inspiration-container{
   position: relative;
   overflow: hidden;
-  height: 650px;  // 為了讓餅乾圖絕對定位在左下，寫死高
-  padding-top: 100px;
+  padding: 100px 0;
 }
 @media (max-width:768px){
-  .inspiration-box{
+  .inspiration-container{
     height: 750px;
     padding-top: 50px;
-    // overflow: hidden;
+    overflow: hidden;
   
   }
 }
 @media (max-width:576px){
-  .inspiration-box{
+  .inspiration-container{
     height: 1000px;
     padding-top: 50px;
     overflow: visible;
   }
 }
-// 餅乾圖-start
+
+// 餅乾背景圖 1-start
 .position-r{
   position: relative;
 }
-.cookie-img{
+.cookie-img1{
   position: absolute;
   left: -150px;
-  bottom: -200px;
+  bottom: -100px;
   width: 40%; 
   height: auto;
 }
 @media(max-width:768px){
-  .cookie-img{
+  .cookie-img1{
     left: -145px;
     bottom: -50px;
     width: 60%; 
     height: auto;
   }
 }
-
 @media(max-width:576px){ 
-  .cookie-img{
+  .cookie-img1{
     left: -115px;
     bottom:-15px;
     width: 80%; 
     height: auto;
   }
 }
-// 餅乾背景圖-end
+// 餅乾背景圖 1-end
 
-//團隊甜點創作靈感卡片-start
+//inspiration-title-card-start
 .intro-card{
   border: none;
   background-color: #FDF8EF;
   margin-left: 100px;
   width: 416px;
-
 }
 @media (max-width: 768px) {
   .intro-card {
@@ -76,123 +71,146 @@
     flex-direction: column;
     align-items: center;
   
-  }
+  } 
 }
-@media(max-width:567px){
+@media (max-width: 576px) {
+  .intro-card {
+    text-align: center;
+  } 
   .btn-md{
     width: 100%;
   }
-  .intro-card{
-    text-align: center;
-  }
-  .inspiration-box{
-    flex-direction: column; 
-    flex-wrap: nowrap;
-    
-  }
 }
-//團隊甜點創作靈感卡片-end
-  
-//第一個 swiper-start
-.swiper-container {
-  position: relative;
-  width: 100% ;
-  margin-left: auto;    //讓輪播區域靠右
-  overflow: hidden;
-}
-@media (max-width: 992px) {
+
+//團隊甜點創作靈感swiper-start
+.inspiration-swiper{
   .swiper-container {
-    width: 100%; 
-    margin-left: auto;
+    position: relative;
+    width: 100% ;
+    margin-left: auto; //讓輪播區域靠右
     overflow: hidden;
   }
-}
-@media (max-width: 576px) {
-  .swiper-container {
-    width: 100%; 
-    margin-left: 0; 
+  @media (max-width: 992px) {
+    .swiper-container {
+      width: 100%; 
+      margin-left: auto;
+      overflow: hidden;
+    }
   }
-}
-
-.swiper-wrapper{
-  position: relative;
-}
-.swiper-slide {
-  width: 405px;
-  height: 333px;
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  border-radius: 50px;
+  @media (max-width: 576px) {
+    .swiper-container {
+      width: 100%; 
+      margin-left: auto; 
+      overflow: visible;
+    }
+  }
+  
+  .insp-swiper{
+    .swiper-wrapper{
+      position: relative;
+    }
+    
+    .swiper-slide {
+      width: 300px !important;
+      height: auto; ///333px
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      border-radius: 50px;
+    }
+    @media (max-width:567px) {
+      width: 280px;
+      height: auto;
+      // height: 600px;
+    }
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-right-radius: 50px;
+      border-top-left-radius: 50px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute; 
+      bottom: 10px; 
+      // top:90%;
+      transform: translateY(-50%); //垂直居中對齊
+      z-index: 10; //確保顯示在卡片上 
+      cursor: pointer;
+      color:#623f2b ;
+      margin-top: 30px;  
+    }
+    //  調整箭頭的大小 
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 20px;
+    }
+    .swiper-pagination {
+      text-align: center;
+      position: relative; 
+      width: 90%;   
+      margin-top: 10px; //與 slide 之間的距離，手動調整到想要的位置
+      z-index: 10;
+    }
+    .swiper-pagination-bullet {
+      background-color: #e4d2c8; 
+      opacity: 0.7; 
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #623f2b; 
+    }
+    
+  }
+  
+  //insp-swiper-card--start
+  .insp-swiper-card-container {
+    width: 100%;
+    height: auto;
+    border-color: #83543A;
+    border-radius: 50px;
+  
+    .insp-swiper-card-body {
+      padding: 20px;
+      text-align: left;
+    }
+  
+    .insp-swiper-cards-tag{
+      background-color: $secondary-300;
+      border:1px solid $secondary-700;
+      padding:4px 8px;
+      color:$grey-700;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+    
+    //限制文本的顯示行數，以下是一整組，缺一不可
+    .insp-swiper-card-text {
+    display: -webkit-box;          
+    -webkit-box-orient: vertical;    
+    -webkit-line-clamp: 3;           
+    overflow: hidden;              
+    text-overflow: ellipsis;        
+    }
+    @media (max-width:567px) {
+      -webkit-line-clamp: 2; 
+    }
+  }
+  .writer-name{
+    padding-left: 8px;
+  }
+  .writer-img{
+    max-width: 30px ;
+    object-fit: contain;
+  }
+  .writer-date{
+    padding-right:8px;
+  }
   
 }
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
-}
-.swiper-button-prev,
-.swiper-button-next {
-  width: 50px;
-  height: 50px;
-  position: absolute; 
-  color:#623f2b ;
-  z-index: 10; //確保顯示在卡片上 
-
-  top: 80%; //讓箭頭按鈕移到slide下方 
-  transform: translateY(-50%); //垂直居中對齊
-  margin-top: 20px; //與 slide 保持距離 
-}
-
-//  調整箭頭的大小 
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 20px;
-}
-
-
-.swiper-pagination {
-  text-align: center;
-  position: relative; 
-  // bottom: -100px; 
-  width: 100%;   
-  margin-top: 120px; /* 與 slide 之間的距離 */
-  z-index: 10;
-  
-  
-}
-
-.swiper-pagination-bullet {
-  background-color: #e4d2c8; 
-  opacity: 0.7; 
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #623f2b; 
-}
-//第一個swiper-end
-
-.sp-card{
-  width: 100%;
-  height: auto;
-  border-color: #83543A;
-  border-radius: 50px;
-}
-// @media(max-width:576px) {
-//   .card-body-md{
-//     height: 300px;
-//   }
-  
-// }
-
-
-
-
-
-
+//團隊甜點創作靈感swiper-end
 //center-banner-start
 .banner-bg{
   width: 100vw; //視窗高度100%
@@ -203,6 +221,177 @@
   object-fit: cover;
   
 }
+@media(max-width: 576px) {
+  .banner-bg{
+    background-image: url(/assets/images/img_story/md-banner.png);
+    h1 {
+      font-size: 30px;
+      text-align: left;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+}
+//center-banner-end
+
+
+// 餅乾背景圖 2-start
+.position-r{
+  position: relative;
+}
+.cookie-img2{
+  position: absolute;
+  right: -100px; //先隨便寫
+  bottom: -50px;
+  width: 40%; 
+  height: auto;
+}
+@media(max-width:768px){
+  .cookie-img2{
+    right: -145px; //先隨便寫
+    bottom: -50px;
+    width: 60%; 
+    height: auto;
+  }
+}
+@media(max-width:576px){ 
+  .cookie-img2{
+    left: -115px;
+    bottom:-15px;
+    width: 80%; 
+    height: auto;
+  }
+}
+// 餅乾背景圖 2-end
+//顧客甜點故事投稿swiper
+.customer-submit-swiper{
+  .swiper-container {
+    position: relative;
+    width: 100% ;
+    margin-right: auto; //讓輪播區域靠左
+    overflow: hidden;
+  }
+  @media (max-width: 992px) {
+    .swiper-container {
+      width: 100%; 
+      margin-left: auto;
+      overflow: hidden;
+    }
+  }
+  @media (max-width: 576px) {
+    .swiper-container {
+      width: 100%; 
+      margin-left: 0; 
+      overflow: visible;
+    }
+  }
+  .swiper-wrapper{
+    position: relative;
+  }
+  .swiper-slide {
+    width: 300px !important;
+    height: auto; ///333px
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 50px;
+  }
+  @media (max-width:567px) {
+    .swiper-slide{
+      width: 280px;
+    }
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute; 
+    bottom: 10px;
+    z-index: 10; 
+    cursor: pointer;
+    color:#623f2b ;
+    margin-top: 30px; //與slide保持距離 
+  }
+  
+  //  調整箭頭的大小 
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 20px;
+  }
+  
+  .swiper-pagination {
+    text-align: center;
+    position: relative; 
+    bottom: 10px;  
+    margin-top: 10px; //與 slide 之間的距離，手動調整到想要的位置
+    z-index: 10;
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: #e4d2c8; 
+    opacity: 0.7; 
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #623f2b; 
+  }
+  
+  //customer-submit-swiper-cards-start
+  .customer-submit-card-container {
+    width: 100%;
+    height: auto;
+    border-color: #83543A;
+    border-radius: 50px;
+  
+    .submit-swiper-card-body {
+      padding: 20px;
+      text-align: left;
+    }
+  
+    .submit-swiper-cards-tag{
+      background-color: $secondary-300;
+      border:1px solid $secondary-700;
+      padding:4px 8px;
+      color: $grey-700;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+    
+    //限制文本的顯示行數，以下是一整組，缺一不可
+    .submit-swiper-card-text {
+    display: -webkit-box;          
+    -webkit-box-orient: vertical;    
+    -webkit-line-clamp: 3;           
+    overflow: hidden;              
+    text-overflow: ellipsis;        
+    }
+    @media (max-width:567px) {
+      -webkit-line-clamp: 2; 
+    }
+  }
+  
+  //inspiration-swiper-card-start
+  .writer-name{
+    padding-left: 8px;
+  }
+  .writer-img{
+    max-width: 30px ;
+    object-fit: contain;
+  }
+  .writer-date{
+    padding-right:8px;
+  }
+  
+}
+
 
 
 
@@ -217,12 +406,10 @@
 .px-50{
   padding: 0 50px;
 }
-
 //字體大小
 .fs-48{
   font-size: 48px;
 }
-
 .fs-55{
   font-size: 55px;
 }
