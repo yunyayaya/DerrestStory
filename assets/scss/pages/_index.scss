@@ -2,8 +2,72 @@ body{
   overflow-x: hidden;
 }
 //banner swiper
-.swiper{
-  height:calc(100vh - 74px);
+.banner-swiper{
+  position: relative;
+  height: 100vh;
+  @include media-breakpoint-up(md){
+   height:auto;
+  }
+  @include media-breakpoint-up(lg){
+   height:100vh;
+  }
+  .swiper-slide{
+    background-color: $secondary-100;
+  }
+  .banner-swiper-button-prev, .banner-swiper-button-next{
+    @include media-breakpoint-up(sm){
+      width:32px;
+      height:32px;
+      color:$primary-100;
+      background-color: #7d5a32;
+      border-radius: 8px;
+      position: absolute;
+      top:30%;
+      transform: translateY(-50%);
+    }
+    @include media-breakpoint-up(md){
+      width:40px;
+      height:40px;
+      top:30%;
+      transform: translateY(-50%);
+    }
+    @include media-breakpoint-up(lg){
+      width:56px;
+      height:56px;
+      top:50%;
+      transform: translateY(-50%);
+    }
+  }
+  .swiper-pagination{
+    position: absolute;
+    @include media-breakpoint-up(sm){
+      left:50%;
+      bottom:25%;
+      transform: translateX(-50%);
+    }
+    @include media-breakpoint-up(md){
+      bottom:10%;
+    }
+    @include media-breakpoint-up(lg){
+      bottom:10%;
+    }
+    @include media-breakpoint-up(xl){
+      bottom:8%;
+    }
+    .swiper-pagination-bullet{
+      margin: 0 16px;
+    }
+  }
+  
+  .banner-swiper-button-prev{
+    left:8%;
+  }
+  .banner-swiper-button-next{
+    right:8%;
+  }
+  .swiper-slide{
+    position: relative;
+  }
 }
 .swiper-desc-title-md{
   font-size:36px;
@@ -14,31 +78,41 @@ body{
 .swiper-desc-title-lg{
   font-size:48px;
 }
-.swiper-slide{
-  position: relative;
-}
 .swiper-container-lg{
   display:none;
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(xl){
     max-width: 1296px;
     display: block;
     background-repeat: no-repeat;
     background-position: right;
     height:100%;
     position: absolute;
-    top:40%;
+    top:63%;
     left:50%;
     transform: translate(-50%,-50%);
   }
   &-left{
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(xl){
       max-width: 1296px;
       display: block;
       background-repeat: no-repeat;
       background-position: left;
       height:100%;
       position: absolute;
-      top:20%;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  &-center{
+    @include media-breakpoint-up(xl){
+      max-width: 1296px;
+      display: block;
+      background-repeat: no-repeat;
+      background-position: right;
+      height:100%;
+      position: absolute;
+      top:80%;
       left:50%;
       transform: translate(-50%,-50%);
     }
@@ -50,7 +124,8 @@ body{
   }
 }
 .swiper-desc-lg{
-  @include media-breakpoint-up(md){
+  display: none;
+  @include media-breakpoint-up(xl){
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -65,7 +140,7 @@ body{
   }
   &-left{
     display: none;
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(xl){
       display: flex;
       flex-direction: column;
       position: absolute;
@@ -88,7 +163,7 @@ body{
   top:16px;
   left:50%;
   transform: translateX(-50%);
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(xl){
     display:none;
   }
 }
@@ -115,15 +190,17 @@ body{
   &-name{
     position: absolute;
     left:50%;
-    top:80px;
     transform: translateX(-50%);
     font-size: 24px;
     font-weight: 700;
     color:$grey-000;
-    top:98px;
+    top:90px;
     &-sub{
         font-size: 20px;
         font-weight: 700;
+    }
+    @media (min-width:460px){
+      top:98px;
     }
     @include media-breakpoint-up(sm){
         top:95px;
@@ -187,11 +264,70 @@ body{
   padding-bottom: 8px;
   border-radius: 8px solid $grey-400;
 }
-.section-top-pick-swiper-wrapper {
-  display: flex;
-}
-.section-top-pick-swiper-slide{
+
+.section-top-pick-swiper{
   height: 100%;
+  padding-top: 248px;
+  position: relative;
+  display: flex;
+  .swiper-wrapper {
+    display: flex;
+  }
+  .card{
+    background-color: $secondary-100;
+    border: 0;
+    height: 100%;
+  }
+  .section-top-pick-swiper-pagination{
+    position: absolute;
+    top:64%;
+    transform: translateY(-50%);
+    @media (min-width:500px){
+      top:66%;
+    }
+    @include media-breakpoint-up(sm){
+      top:68%;
+    }
+    @include media-breakpoint-up(md){
+      top:62%;
+    }
+  }
+  .section-top-pick-swiper-button-prev, .section-top-pick-swiper-button-next{
+    position: absolute;
+    top:65%;
+    @media (min-width:500px){
+      top:66%;
+    }
+    @include media-breakpoint-up(sm){
+      top:68%;
+    }
+    @include media-breakpoint-up(md){
+      top:62%;
+    }
+  }
+  .section-top-pick-swiper-button-prev{
+    justify-content: flex-start;
+  }
+  .section-top-pick-swiper-button-next{
+    justify-content: flex-end;
+  }
+}
+.section-top-pick-swiper-content{
+  padding-top: 96px;
+}
+.section-top-pick-swiper-title{
+  color:#7d5a32;
+  font-weight: 700;
+}
+.section-top-pick-swiper-desc{
+  overflow: hidden;
+  display: -webkit-box;        /* 使元素以彈性盒子布局 */
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+  color:$primary-900;
+  @include media-breakpoint-up(md){
+    -webkit-line-clamp: 6;       /* 顯示六行文字 */
+  }
 }
 
 //dessert-story
@@ -287,18 +423,32 @@ body{
     &-title{
       color:$grey-700;
       font-weight: 700;
-      font-size:30px;
+      font-size:24px;
       padding-bottom: 8px;
+      @include media-breakpoint-up(xl){
+        font-size: 30px;
+      }
     }
     &-text{
       font-size: 16px;
       padding-top:8px;
+      overflow: hidden;
+      display: -webkit-box;        /* 使元素以彈性盒子布局 */
+      -webkit-line-clamp: 2;       /* 顯示...行文字 */
+      -webkit-box-orient: vertical;
+      @include media-breakpoint-up(xl){
+        -webkit-line-clamp: 4;
+      }
+      @include media-breakpoint-up(xxl){
+        -webkit-line-clamp: 7;
+      }
     }
     &-link{
       padding-right: 8px;
     }
   }
-  &-content-card-img{
+  &-content-card-img, &-content-card-img-lg{
+    object-fit: cover;
     border-radius: 100px 25px 0px 0px;
     @include media-breakpoint-up(lg){
       border-radius: 150px 0px 0px 50px;
@@ -356,6 +506,34 @@ body{
   -webkit-box-orient: vertical;
   padding-top: 8px;
 }
+
+.section-dessert-story-swiper{
+  height: auto;
+  position:relative;
+  .swiper-wrapper{
+    display: flex;
+  }
+  .swiper-slide{
+    max-width: 300px;
+  }
+  .card{
+    border: 1px $primary-700 solid;
+    background-color: $secondary-100;
+    border-radius: 25px;
+  }
+}
+.swiper-slide .section-dessert-story-content-cards-img{
+  height: 300px;
+  overflow: hidden;
+  img{
+    display: block;
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+  }
+}
+
 //about
 .section-about{
   padding-bottom: 120px;
