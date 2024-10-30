@@ -1,5 +1,4 @@
-//團隊甜點創作靈感背景，為了控制餅乾圖拉出來特別寫
-.inspiration-bg {
+.bg-style {
   position: relative;
   width: 100%; 
   overflow: hidden; //隱藏超出區塊的餅乾圖片
@@ -59,7 +58,7 @@
   border: none;
   background-color: #FDF8EF;
   margin-left: 100px;
-  width: 416px;
+  width: 350px;
 }
 @media (max-width: 768px) {
   .intro-card {
@@ -82,42 +81,35 @@
   }
 }
 
-//團隊甜點創作靈感swiper-start
+//團隊甜點創作靈感 swiper-start
 .inspiration-swiper{
   .swiper-container {
     position: relative;
     width: 100% ;
-    margin-left: auto; //讓輪播區域靠右
+    margin-left: auto; //讓輪播區域靠左
     overflow: hidden;
   }
   @media (max-width: 992px) {
     .swiper-container {
       width: 100%; 
-      margin-left: auto;
-      overflow: hidden;
     }
   }
   @media (max-width: 576px) {
     .swiper-container {
-      width: 100%; 
-      margin-left: auto; 
       overflow: visible;
     }
   }
-  
-  .insp-swiper{
-    .swiper-wrapper{
-      position: relative;
-    }
-    
-    .swiper-slide {
-      width: 300px !important;
-      height: auto; ///333px
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      border-radius: 50px;
-    }
+  .swiper-wrapper{
+    position: relative;
+  }
+  .swiper-slide {
+    width: 300px !important;
+    height: auto; ///333px
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 50px;
+  }
     @media (max-width:567px) {
       width: 280px;
       height: auto;
@@ -134,7 +126,7 @@
     .swiper-button-prev,
     .swiper-button-next {
       position: absolute; 
-      bottom: 10px; 
+      bottom: 100px;
       // top:90%;
       transform: translateY(-50%); //垂直居中對齊
       z-index: 10; //確保顯示在卡片上 
@@ -148,9 +140,9 @@
       font-size: 20px;
     }
     .swiper-pagination {
-      text-align: center;
+      // text-align: center;
       position: relative; 
-      width: 90%;   
+      // width: 90%;   
       margin-top: 10px; //與 slide 之間的距離，手動調整到想要的位置
       z-index: 10;
     }
@@ -162,7 +154,7 @@
       background-color: #623f2b; 
     }
     
-  }
+  
   
   //insp-swiper-card--start
   .insp-swiper-card-container {
@@ -208,9 +200,9 @@
   .writer-date{
     padding-right:8px;
   }
-  
 }
 //團隊甜點創作靈感swiper-end
+
 //center-banner-start
 .banner-bg{
   width: 100vw; //視窗高度100%
@@ -235,41 +227,50 @@
 }
 //center-banner-end
 
+//顧客甜點故事投稿區塊--start
+.customer-submit-container{
+  display: flex;
+  flex-wrap: nowrap;
+  // justify-content: space-between;
+  // align-items: center; 
+  padding: 100px 0;
+}
 
-// 餅乾背景圖 2-start
-.position-r{
-  position: relative;
+//顧客甜點故事投稿卡片
+.intro-card-submit{
+  border: none;
+  background-color: #FDF8EF;
+  margin-right: 100px;
+  width: 350px;
+  margin-left: 50px;
 }
-.cookie-img2{
-  position: absolute;
-  right: -100px; //先隨便寫
-  bottom: -50px;
-  width: 40%; 
-  height: auto;
+@media (max-width: 768px) {
+  .intro-card-submit {
+    order: -1;  //將卡片順序提前 
+    width: 350px; 
+    margin-bottom: 60px; 
+    margin-left: 0px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  } 
 }
-@media(max-width:768px){
-  .cookie-img2{
-    right: -145px; //先隨便寫
-    bottom: -50px;
-    width: 60%; 
-    height: auto;
+@media (max-width: 576px) {
+  .intro-card-submit {
+    text-align: center;
+  } 
+  .btn-md{
+    width: 100%;
   }
 }
-@media(max-width:576px){ 
-  .cookie-img2{
-    left: -115px;
-    bottom:-15px;
-    width: 80%; 
-    height: auto;
-  }
-}
-// 餅乾背景圖 2-end
+
 //顧客甜點故事投稿swiper
 .customer-submit-swiper{
   .swiper-container {
     position: relative;
-    width: 100% ;
-    margin-right: auto; //讓輪播區域靠左
+    width: 100%;
+    margin-right: auto; 
     overflow: hidden;
   }
   @media (max-width: 992px) {
@@ -282,7 +283,6 @@
   @media (max-width: 576px) {
     .swiper-container {
       width: 100%; 
-      margin-left: 0; 
       overflow: visible;
     }
   }
@@ -291,7 +291,7 @@
   }
   .swiper-slide {
     width: 300px !important;
-    height: auto; ///333px
+    height: auto; 
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -338,7 +338,7 @@
     background-color: #e4d2c8; 
     opacity: 0.7; 
   }
-
+  
   .swiper-pagination-bullet-active {
     background-color: #623f2b; 
   }
@@ -349,12 +349,12 @@
     height: auto;
     border-color: #83543A;
     border-radius: 50px;
-  
+    
     .submit-swiper-card-body {
       padding: 20px;
       text-align: left;
     }
-  
+    
     .submit-swiper-cards-tag{
       background-color: $secondary-300;
       border:1px solid $secondary-700;
@@ -367,11 +367,11 @@
     
     //限制文本的顯示行數，以下是一整組，缺一不可
     .submit-swiper-card-text {
-    display: -webkit-box;          
-    -webkit-box-orient: vertical;    
-    -webkit-line-clamp: 3;           
-    overflow: hidden;              
-    text-overflow: ellipsis;        
+      display: -webkit-box;          
+      -webkit-box-orient: vertical;    
+      -webkit-line-clamp: 3;           
+      overflow: hidden;              
+      text-overflow: ellipsis;        
     }
     @media (max-width:567px) {
       -webkit-line-clamp: 2; 
@@ -391,6 +391,182 @@
   }
   
 }
+// 餅乾背景圖 2-start
+.position-r{
+  position: relative;
+}
+.cookie-img2{
+  z-index: -1;
+  position: absolute;
+  right: -50px; 
+  bottom: -70px;
+  width: 35%; 
+  height: auto;
+}
+@media(max-width:768px){
+  .cookie-img2{
+    right: -50px; 
+    bottom: -50px;
+    width: 60%; 
+    
+  }
+}
+@media(max-width:576px){ 
+  .cookie-img2{
+    left: -115px;
+    bottom:-15px;
+    width: 80%; 
+    
+  }
+}
+// 餅乾背景圖 2-end
+
+
+//主題專欄區塊
+.theme-container{
+  position: relative;
+  padding: 80px ;
+}
+//主題專欄 Swiper
+.theme-swiper{
+  .swiper-container {
+    position: relative;
+    width: 100%;
+    
+  }
+  @media (max-width: 992px) {
+    .swiper-container {
+      width: 100%; 
+      margin-left: auto;
+      overflow: hidden;
+    }
+  }
+  @media (max-width: 576px) {
+    .swiper-container {
+      width: 100%; 
+      overflow: visible;
+    }
+  }
+  .swiper-wrapper{
+    position: relative;
+  }
+  .swiper-slide {
+    width: 340px !important;
+    height: auto; 
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 50px;
+  }
+  @media (max-width:567px) {
+    .swiper-slide{
+      width: 280px;
+    }
+  }
+  .swiper-slide img {
+    display: block;
+    // width: 100%;
+    width: 356px;
+    // height: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute; 
+    bottom: 10px;
+    z-index: 10; 
+    cursor: pointer;
+    color:#623f2b ;
+    margin-top: 30px; //與slide保持距離 
+  }
+  
+  //  調整箭頭的大小 
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 20px;
+  }
+  
+  .swiper-pagination {
+    text-align: center;
+    position: relative; 
+    bottom: 10px;  
+    margin-top: 10px; //與 slide 之間的距離，手動調整到想要的位置
+    z-index: 10;
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: #e4d2c8; 
+    opacity: 0.7; 
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #623f2b; 
+  }
+  
+  //customer-submit-swiper-cards-start
+  .theme-card-container {
+    width: 100%;
+    height: auto;
+    border-color: #83543A;
+    border-radius: 50px;
+    
+    .theme-swiper-card-body {
+      padding: 20px;
+      text-align: left;
+    }
+    
+    .theme-swiper-cards-tag{
+      background-color: $secondary-300;
+      border:1px solid $secondary-700;
+      padding:4px 8px;
+      color: $grey-700;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+    
+    //限制文本的顯示行數，以下是一整組，缺一不可
+    .theme-swiper-card-text {
+      display: -webkit-box;          
+      -webkit-box-orient: vertical;    
+      -webkit-line-clamp: 3;           
+      overflow: hidden;              
+      text-overflow: ellipsis;        
+    }
+    @media (max-width:567px) {
+      -webkit-line-clamp: 2; 
+    }
+  }
+  
+  //inspiration-swiper-card-start
+  .writer-name{
+    padding-left: 8px;
+  }
+  .writer-img{
+    width: 30px !important;
+    height: 30px !important;
+    object-fit: contain;
+  }
+  .writer-date{
+    padding-right:8px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
