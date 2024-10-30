@@ -16,12 +16,12 @@
         <!-- Slides -->
         <div class="swiper-slide">
           <a href="#">
-            <picture class="swiper-background object-fit-cover">
+            <picture class="swiper-background object-fit-cover bg-center">
               <source srcset="../assets/images/img_index/lg-swiper-img01.png" media="(min-width:576px)">
               <img src="../assets/images/img_index/md-swiper-img01.png" alt="">
             </picture>
           </a>
-          <div class="container swiper-container-md zen-maru" style="background-image: url(../assets/images/img_index/md-swiper-pattern01.png);">
+          <div class="container swiper-container-md" style="background-image: url(../assets/images/img_index/md-swiper-pattern01.png);">
             <div class="swiper-desc-md">
               <h3 class="swiper-desc-title-md-p">新品上市</h3>
               <h2 class="swiper-desc-title-md">莓果酥派</h2>
@@ -29,7 +29,7 @@
               <a href="#" class="btn btn-primary-700 text-primary-100 rounded-pill">了解更多</a> 
             </div>            
           </div>
-          <div class="container swiper-container-lg zen-maru" style="background-image: url(../assets/images/img_index/lg-swiper-pattern01.png);">
+          <div class="container swiper-container-lg" style="background-image: url(../assets/images/img_index/lg-swiper-pattern01.png);">
             <div class="swiper-desc-lg w-50">
               <h2 class="swiper-desc-title-lg">新品上市-莓果酥派</h2>
               <p class="swiper-desc-content-lg">天然莓果，搭配冰淇淋的奇幻組合</p>
@@ -44,7 +44,7 @@
               <img src="../assets/images/img_index/md-swiper-img02.png" alt="">
             </picture>
           </a>
-          <div class="container swiper-container-md zen-maru" style="background-image: url(../assets/images/img_index/md-swiper-pattern02.png);">
+          <div class="container swiper-container-md" style="background-image: url(../assets/images/img_index/md-swiper-pattern02.png);">
             <div class="swiper-desc-md">
               <h3 class="swiper-desc-title-md-p">本月主打</h3>
               <h2 class="swiper-desc-title-md">十月栗子香</h2>
@@ -52,7 +52,7 @@
               <a href="#" class="btn btn-primary-700 text-primary-100 rounded-pill">了解更多</a> 
             </div>            
           </div>
-          <div class="container swiper-container-lg-left zen-maru" style="background-image: url(../assets/images/img_index/lg-swiper-pattern02.png);">
+          <div class="container swiper-container-lg-left" style="background-image: url(../assets/images/img_index/lg-swiper-pattern02.png);">
             <div class="swiper-desc-lg-left w-50">
               <h2 class="swiper-desc-title-lg">本月主打，十月栗子香</h2>
               <p class="swiper-desc-content-lg">栗子泥藏著秋日的微風，等你來發現</p>
@@ -67,7 +67,7 @@
               <img src="../assets/images/img_index/md-swiper-img03.png" alt="">
             </picture>
           </a>
-          <div class="container swiper-container-md zen-maru" style="background-image: url(../assets/images/img_index/md-swiper-pattern03.png);">
+          <div class="container swiper-container-md" style="background-image: url(../assets/images/img_index/md-swiper-pattern03.png);">
             <div class="swiper-desc-md">
               <h3 class="swiper-desc-title-md-p">銷售冠軍</h3>
               <h2 class="swiper-desc-title-md">馬卡龍蛋糕</h2>
@@ -75,7 +75,7 @@
               <a href="#" class="btn btn-primary-700 text-primary-100 rounded-pill">了解更多</a> 
             </div>            
           </div>
-          <div class="container swiper-container-lg zen-maru" style="background-image: url(../assets/images/img_index/lg-swiper-pattern03.png);">
+          <div class="container swiper-container-lg-center" style="background-image: url(../assets/images/img_index/lg-swiper-pattern03.png);">
             <div class="swiper-desc-lg w-50">
               <h2 class="swiper-desc-title-lg">銷售冠軍-馬卡龍蛋糕</h2>
               <p class="swiper-desc-content-lg">每一口，都值得與你最愛的人分享</p>
@@ -87,8 +87,8 @@
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
       <!-- If we need navigation buttons -->
-      <div><span class="swiper-button-prev"><i class="bi bi-chevron-left"></i></span></div>
-      <div><span class="swiper-button-next"><i class="bi bi-chevron-right"></i></span></div>
+      <div><span class="swiper-button-prev banner-swiper-button-prev d-none d-sm-flex text-center"></div>
+      <div><span class="swiper-button-next banner-swiper-button-next d-none d-sm-flex text-center"></div>
     </div>
     <!-- Top pick -->
     <div class="section section-top-pick">
@@ -162,45 +162,87 @@
           </div>
         </div>
         
-        <div class="container md-layout">
-          <div class="section-top-pick-swiper-container swiper-container">
-            <div class="section-top-pick-swiper-wrapper swiper-wrapper">
+        <div class="container section-top-pick-swiper-container md-layout">
+          <div class="section-top-pick-swiper swiper">
+            <div class="swiper-wrapper">
               <!-- Swiper Slide -->
-              <div class="section-top-pick-swiper-slide swiper-slide d-flex flex-column align-items-center">
+              <div class="swiper-slide d-flex flex-column align-items-center">
                 <div class="row">
                   <div class="col-12">
                     <div class="card">
                       <img src="../assets/images/img_index/md-top-pick01.png" alt="">
                       <div class="section-top-pick-swiper-content">
-                        <h3 class="text-center">熔岩蛋糕<br>(Molten Lava Cake)</h3>
-                        <p>熔岩蛋糕是一款充滿驚喜與誘惑的甜點，每一個細節都精心設計，讓人難以抗拒。外表是鬆軟濃郁的巧克力蛋糕，表層微微龜裂，透露出些許神秘感，讓人忍不住想要一探其中的奧秘。當刀叉輕輕劃開那層香甜的外皮，內層熱騰騰的巧克力醬便緩緩流出，如同熔岩般濃稠而香醇，四溢的巧克力香氣瞬間撲鼻而來，為甜點時刻增添了儀式感。</p>
-                        <button type="button" class="btn btn-light text-dark section-top-pick-btn w-100">了解更多</button>
+                        <h3 class="text-center section-top-pick-swiper-title">熔岩蛋糕<br>(Molten Lava Cake)</h3>
+                        <p class="text-start section-top-pick-swiper-desc">熔岩蛋糕是一款充滿驚喜與誘惑的甜點，每一個細節都精心設計，讓人難以抗拒。外表是鬆軟濃郁的巧克力蛋糕，表層微微龜裂，透露出些許神秘感，讓人忍不住想要一探其中的奧秘。當刀叉輕輕劃開那層香甜的外皮，內層熱騰騰的巧克力醬便緩緩流出，如同熔岩般濃稠而香醇，四溢的巧克力香氣瞬間撲鼻而來，為甜點時刻增添了儀式感。</p>
+                        <button type="button" class="btn btn-light text-dark section-top-pick-btn-md w-100">了解更多</button>
                       </div>
                     </div>  
                   </div>
                 </div>
               </div>
-              <div class="section-top-pick-swiper-slide swiper-slide d-flex flex-column align-items-center">
+              <div class="swiper-slide d-flex flex-column align-items-center">
                 <div class="row">
                   <div class="col-12">
                     <div class="card">
                       <img src="../assets/images/img_index/md-top-pick02.png" alt="">
                       <div class="section-top-pick-swiper-content">
-                        <h3 class="text-center">冰淇淋泡芙塔<br>(Profiterole Tower)</h3>
-                        <p>冰淇淋泡芙塔是一款極具視覺和口感魅力的法式甜點，猶如藝術品般的精緻造型總能在宴會中成為眾人目光的焦點。由一顆顆精緻小巧的泡芙堆疊而成，層層相疊成塔狀，宛如甜美的迷你塔樓，每一顆泡芙中都暗藏著濃郁的冰淇淋內餡。</p>
-                        <button type="button" class="btn btn-light text-dark section-top-pick-btn w-100">了解更多</button>
+                        <h3 class="text-center section-top-pick-swiper-title">冰淇淋泡芙塔<br>(Profiterole Tower)</h3>
+                        <p class="text-start section-top-pick-swiper-desc">冰淇淋泡芙塔是一款極具視覺和口感魅力的法式甜點，猶如藝術品般的精緻造型總能在宴會中成為眾人目光的焦點。由一顆顆精緻小巧的泡芙堆疊而成，層層相疊成塔狀，宛如甜美的迷你塔樓，每一顆泡芙中都暗藏著濃郁的冰淇淋內餡。</p>
+                        <button type="button" class="btn btn-light text-dark section-top-pick-btn-md w-100">了解更多</button>
                       </div>
                     </div>  
                   </div>
                 </div>
               </div>
-            </div> 
+              <div class="swiper-slide d-flex flex-column align-items-center">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <img src="../assets/images/img_index/md-top-pick03.png" alt="">
+                      <div class="section-top-pick-swiper-content">
+                        <h3 class="text-center section-top-pick-swiper-title">黃金酥脆曲奇<br>(Golden Crunchy Cookies)</h3>
+                        <p class="text-start section-top-pick-swiper-desc">這款黃金酥脆曲奇擁有絕妙的口感，外層金黃酥脆，輕輕一咬便能聽到清脆的聲音，內層則保留著鬆軟綿密的質地，每一口都充滿濃郁的奶油香氣與微微的甜味。那種入口即化的感覺，彷彿在舌尖上跳舞般輕盈柔滑，讓人不禁閉上眼睛細細品味。搭配一杯溫熱的牛奶，醇厚的奶香與曲奇的酥脆完美融合，為午茶時光譜寫了一首美妙的樂章。</p>
+                        <button type="button" class="btn btn-light text-dark section-top-pick-btn-md w-100">了解更多</button>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide d-flex flex-column align-items-center">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <img src="../assets/images/img_index/md-top-pick04.png" alt="">
+                      <div class="section-top-pick-swiper-content">
+                        <h3 class="text-center section-top-pick-swiper-title">森林莓果塔<br>(Berry Forest Tart)</h3>
+                        <p class="text-start section-top-pick-swiper-desc">酥脆的塔皮上鋪滿了細膩香濃的奶油，猶如柔軟的白雲輕覆其上，接著再層層鋪滿新鮮的森林莓果，為這道甜點增添了豐富的視覺與味覺層次。草莓的鮮甜、藍莓的微酸以及覆盆子的果香巧妙融合，隨著每一口的品嚐，在舌尖綻放出如同大自然般的鮮活與清新。</p>
+                        <button type="button" class="btn btn-light text-dark section-top-pick-btn-md w-100">了解更多</button>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide d-flex flex-column align-items-center">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <img src="../assets/images/img_index/md-top-pick05.png" alt="">
+                      <div class="section-top-pick-swiper-content">
+                        <h3 class="text-center section-top-pick-swiper-title">草莓奶酥<br>(Strawberry Crumble)</h3>
+                        <p class="text-start section-top-pick-swiper-desc">草莓奶酥是一款口感豐富的甜點，將香濃的奶香與草莓的酸甜完美結合。底層鋪滿了新鮮草莓果肉，經過細火慢煮，成為濃郁的草莓餡料，散發出自然的莓果香氣。上層覆蓋著酥脆的奶酥餅皮，入口鬆脆卻不失細膩。當你輕輕用湯匙挖下一口，酥脆的餅皮與滑嫩的草莓餡料在口中交織，層層疊疊的口感令人驚喜，每一口都彷彿是在品味一段甜蜜的旅程。</p>
+                        <button type="button" class="btn btn-light text-dark section-top-pick-btn-md w-100">了解更多</button>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 如果需要分页 -->
+            <div class="section-top-pick-swiper-pagination swiper-pagination"></div>
+            <!-- 如果需要导航按钮 -->
+            <div class="section-top-pick-swiper-button-prev swiper-button-prev"></div>
+            <div class="section-top-pick-swiper-button-next swiper-button-next"></div> 
           </div> 
-          <!-- 如果需要分页 -->
-          <div class="section-top-pick-swiper-pagination swiper-pagination"></div>
-          <!-- 如果需要导航按钮 -->
-          <div class="section-top-pick-swiper-button-prev swiper-button-prev"></div>
-          <div class="section-top-pick-swiper-button-next swiper-button-next"></div>
         </div>        
       </div>       
     </div>
@@ -223,7 +265,10 @@
           <div class="section-dessert-story-content-card mb-3">
             <div class="row g-0">
               <div class="col-lg-7">
-                <img src="../assets/images/img_index/lg-dessert-story-img01.png" class="img-fluid card-img-top section-dessert-story-content-card-img" alt="...">
+                <picture>
+                  <source srcset="../assets/images/img_index/lg-dessert-story-img01.png" media="(min-width:375px)" class="section-dessert-story-content-card-img-lg">
+                  <img src="../assets/images/img_index/md-dessert-story-img01.png" class="section-dessert-story-content-card-img" alt="...">
+                </picture>
               </div>
               <div class="col-lg-5 d-flex flex-column justify-content-center">
                 <div class="section-dessert-story-content-card-body">
@@ -242,7 +287,7 @@
               </div>
             </div>
           </div>
-          <div class="section-dessert-story-content-cards">
+          <div class="section-dessert-story-content-cards lg-layout">
             <div class="row">
               <div class="col-lg-4">
                 <div class="section-dessert-story-content-cards-list">
@@ -298,6 +343,89 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="section-dessert-story-content-cards md-layout">
+            <div class="section-dessert-story-swiper swiper">
+              <div class="swiper-wrapper">
+                <!--Swiper Slide-->
+                <div class="swiper-slide">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card">
+                        <div class="section-dessert-story-content-cards-img">
+                          <img src="../assets/images/img_index/md-dessert-story-img02.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="section-dessert-story-content-cards-body text-start">
+                          <span class="section-dessert-story-content-cards-type rounded-pill">團隊甜點創作靈感</span>
+                          <h5 class="section-dessert-story-content-cards-title">從家傳秘方到創新美味的轉變</h5>
+                          <div class="section-dessert-story-content-cards-writer d-flex align-items-center">
+                            <img src="../assets/images/img_index/Jessica.png" alt="" class="writer-img">
+                            <span class="writer-name">Jessica</span>
+                            <span class="writer-date ms-auto">2024/9/22</span>
+                          </div>
+                          <p class="section-dessert-story-content-cards-text">甜點不僅是舌尖上的享受，更是一段段動人的情感故事。在這個專欄中，我們將為你細細講述那些隱藏在甜點背後的故事與情感，從愛情的巧克力慕斯到充滿兒時回憶的奶酪蛋糕，每一篇文章都是一首為甜點而作的詩歌，讓甜點與情感完美交織。</p>
+                          <div class="section-dessert-story-cards-article text-end">
+                            <a href="" class="section-dessert-story-content-cards-link text-end text-primary-900">閱讀全文 <span><i class="bi bi-arrow-right-circle-fill"></i></span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card">
+                        <div class="section-dessert-story-content-cards-img">
+                          <img src="../assets/images/img_index/md-dessert-story-img03.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="section-dessert-story-content-cards-body text-start">
+                          <span class="section-dessert-story-content-cards-type rounded-pill">顧客甜點故事投稿</span>
+                          <h5 class="section-dessert-story-content-cards-title">翻開舊食譜,尋找新靈感的旅程</h5>
+                          <div class="section-dessert-story-content-cards-writer d-flex align-items-center">
+                            <img src="../assets/images/img_index/Jessica.png" alt="" class="writer-img">
+                            <span class="writer-name">Jessica</span>
+                            <span class="writer-date ms-auto">2024/9/22</span>
+                          </div>
+                          <p class="section-dessert-story-content-cards-text">穿越時光，品味甜蜜。這個專欄帶你探索從經典法式甜點到現代創意甜品的轉變過程，揭開每道甜點背後的歷史與故事。無論是歷久不衰的拿破崙千層酥，還是帶著創新風味的草莓奶油泡芙，每一道甜品都充滿著動人的故事與傳統的韻味。</p>
+                          <div class="section-dessert-story-cards-article text-end">
+                            <a href="" class="section-dessert-story-content-cards-link text-end text-primary-900">閱讀全文 <span><i class="bi bi-arrow-right-circle-fill"></i></span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card">
+                        <div class="section-dessert-story-content-cards-img">
+                          <img src="../assets/images/img_index/md-dessert-story-img04.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="section-dessert-story-content-cards-body text-start">
+                          <span class="section-dessert-story-content-cards-type rounded-pill">主題專欄</span>
+                          <h5 class="section-dessert-story-content-cards-title">甜點潮流誌：創新美味的極致探索</h5>
+                          <div class="section-dessert-story-content-cards-writer d-flex align-items-center">
+                            <img src="../assets/images/img_index/Jessica.png" alt="" class="writer-img">
+                            <span class="writer-name">Jessica</span>
+                            <span class="writer-date ms-auto">2024/9/22</span>
+                          </div>
+                          <p class="section-dessert-story-content-cards-text">與我們一起探索甜點世界的最新潮流與風尚！在這個專欄中，我們將介紹世界各地最前衛的甜點創作，從分子料理的魔法變幻，到令人驚艷的健康甜品配方，帶你發現甜點藝術的無限可能。無論你是甜點愛好者還是創作高手，這裡將激發你無窮的創作靈感與味蕾的冒險精神。</p>
+                          <div class="section-dessert-story-cards-article text-end">
+                            <a href="" class="section-dessert-story-content-cards-link text-end text-primary-900">閱讀全文 <span><i class="bi bi-arrow-right-circle-fill"></i></span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 如果需要导航按钮 -->
+              <!--<div class="section-dessert-story-swiper-button-prev swiper-button-prev"></div>
+              <div class="section-dessert-story-swiper-button-next swiper-button-next"></div>-->
+
             </div>
           </div>
         </div>
