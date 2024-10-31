@@ -5,14 +5,12 @@
 }
 .inspiration-container{
   position: relative;
-  overflow: hidden;
   padding: 100px 0;
 }
 @media (max-width:768px){
   .inspiration-container{
     height: 750px;
     padding-top: 50px;
-    overflow: hidden;
   
   }
 }
@@ -63,7 +61,8 @@
 @media (max-width: 768px) {
   .intro-card {
     order: -1;  //將卡片順序提前 
-    width: 350px; 
+    // width: 350px;
+    width: 100%;
     margin-bottom: 60px; 
     margin-left: 0px ;
     display: flex;
@@ -203,7 +202,7 @@
 }
 //團隊甜點創作靈感swiper-end
 
-//center-banner-start
+//----------center-banner-start
 .banner-bg{
   width: 100vw; //視窗高度100%
   height: 550px;
@@ -215,6 +214,16 @@
 }
 @media(max-width: 576px) {
   .banner-bg{
+    h1{
+      font-size: 40px;
+    }
+    p{
+      font-size: 20px;
+    }
+  }
+}
+@media(max-width: 378px) {
+  .banner-bg{
     background-image: url(/assets/images/img_story/md-banner.png);
     h1 {
       font-size: 30px;
@@ -225,15 +234,32 @@
     }
   }
 }
-//center-banner-end
+//----------center-banner-end
 
-//顧客甜點故事投稿區塊--start
+//----------顧客甜點故事投稿區塊--start
 .customer-submit-container{
+  position: relative;
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: nowrap;
-  // justify-content: space-between;
-  // align-items: center; 
+  overflow: hidden;
   padding: 100px 0;
+}
+@media (max-width:768px){
+  .customer-submit-container{
+    height: 750px;
+    padding-top: 50px;
+  
+  }
+}
+@media(max-width: 576px) {
+  .customer-submit-container{
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    padding-top: 50px;
+    
+  }
 }
 
 //顧客甜點故事投稿卡片
@@ -246,10 +272,10 @@
 }
 @media (max-width: 768px) {
   .intro-card-submit {
-    order: -1;  //將卡片順序提前 
-    width: 350px; 
+    // width: 350px;
+    width: 100%;
+    margin-right: 0px; 
     margin-bottom: 60px; 
-    margin-left: 0px ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -317,7 +343,7 @@
     z-index: 10; 
     cursor: pointer;
     color:#623f2b ;
-    margin-top: 30px; //與slide保持距離 
+    margin-top: -50px; //與slide保持距離 
   }
   
   //  調整箭頭的大小 
@@ -327,7 +353,6 @@
   }
   
   .swiper-pagination {
-    text-align: center;
     position: relative; 
     bottom: 10px;  
     margin-top: 10px; //與 slide 之間的距離，手動調整到想要的位置
@@ -378,7 +403,7 @@
     }
   }
   
-  //inspiration-swiper-card-start
+  
   .writer-name{
     padding-left: 8px;
   }
@@ -395,18 +420,19 @@
 .position-r{
   position: relative;
 }
+
 .cookie-img2{
   z-index: -1;
   position: absolute;
   right: -50px; 
-  bottom: -70px;
-  width: 35%; 
+  bottom: -100px;
+  width: 33%; 
   height: auto;
 }
 @media(max-width:768px){
   .cookie-img2{
-    right: -50px; 
-    bottom: -50px;
+    right: -80px; 
+    bottom: -100px;
     width: 60%; 
     
   }
@@ -420,12 +446,26 @@
   }
 }
 // 餅乾背景圖 2-end
+//----------顧客甜點故事投稿區塊--end
 
 
-//主題專欄區塊
+//----------主題專欄區塊--start
 .theme-container{
   position: relative;
   padding: 80px ;
+}
+@media (max-width: 576px){
+  .theme-container{
+    padding: 80px 12px;
+  }
+}
+
+//餅乾背景圖 3--start
+.bg-cookie{
+  background-image: url(/assets/images/img_story/cookie3.png);
+  background-repeat: no-repeat;
+  background-position: bottom center ;
+  z-index: 5;
 }
 //主題專欄 Swiper
 .theme-swiper{
@@ -475,18 +515,22 @@
   }
   .swiper-button-prev,
   .swiper-button-next {
-    position: absolute; 
-    bottom: 10px;
-    z-index: 10; 
+    width: 30px;
+    height: 30px;
+    text-align:center;
+    line-height: 30px;
+    background-color:#FDF8EF; 
+    border-radius: 8px;
+    z-index: 10;
     cursor: pointer;
-    color:#623f2b ;
-    margin-top: 30px; //與slide保持距離 
+    margin-top: 75px; //調整箭頭上下位置
   }
   
   //  調整箭頭的大小 
   .swiper-button-prev::after,
   .swiper-button-next::after {
     font-size: 20px;
+    color:#623f2b ;
   }
   
   .swiper-pagination {
