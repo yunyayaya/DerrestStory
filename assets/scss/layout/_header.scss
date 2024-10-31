@@ -4,11 +4,30 @@
 .search-active .search-box{
   display:inline-block;
 }
-.nav-link{
-  display: block;
+.navbar-nav {
+  padding-top: 10px; /* 調整間距 */
 }
-//.navbar-main{
-//  @include media-breakpoint-up(){
-//    display: none;
-//  }
-//}
+.ham-icon-btn:hover{
+  background-color: $primary-600;
+  width:40px;
+  height: 40px;
+  border-radius: 8px;
+}
+.ham-icon{
+  font-size: 24px;
+}
+.dropdown{
+  position: relative;
+}
+.dropdown-menu{
+  position: absolute;
+  width:168px;
+  top:50px;
+  right:0;
+  border: 1px solid $grey-400;
+  border-radius: 8px;
+  padding: 8px 24px 8px 16px;
+}
+.nav-link-icon{
+  padding-right:12px;
+}
