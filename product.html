@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products</title>
-  <!-- <link rel="stylesheet" href="../assets/scss/all.css"> -->
-  <script type="module" crossorigin src="/DessertStory/assets/main-36c65608.js"></script>
-  <link rel="stylesheet" href="/DessertStory/assets/main-7135de5a.css">
+  <script type="module" crossorigin src="/DessertStory/assets/product-d15f7d03.js"></script>
+  <link rel="modulepreload" crossorigin href="/DessertStory/assets/main-a6b74a3f.js">
+  <link rel="stylesheet" href="/DessertStory/assets/main-fb5d0851.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             <div class="d-lg-block d-none" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="story.html">甜點故事</a>
+                    <a class="nav-link " aria-current="page" href="story.html">甜點故事</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="product.html">所有商品</a>
@@ -36,7 +36,7 @@
                         <input class="form-control me-2 search-box search-active" type="search" placeholder="Search" aria-label="Search">
                     </div>
                 </form>
-                <a class="nav-link" href="#"><i class="bi bi-person fs-4 mx-3"></i></a>
+                <a class="nav-link" href="#"><i class="bi bi-person fs-4 mx-3 d-lg-block d-none"></i></a>
                 <a class="nav-link" href="cart.html"><i class="bi bi-cart align-center fs-4 mx-3"></i></a>
             </div>
             <button class="navbar-toggler-lg ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@
                     <a class="nav-link" href="#">所有商品</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">品牌故事</a>
+                    <a class="nav-link" href="story.html">甜點故事</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#">最新消息</a>
@@ -63,91 +63,139 @@
               </div>
         </div>   
     </div>
-  </nav>
-    <h2>所有商品<span>Products</span></h2>
-
-
-
-
-
-
-    <div class="feedback-bg" style="background-image: url(/DessertStory/assets/feedback_bg-93c7c297.png);">
+  </nav>    <section>
       <div class="container">
-        <div class="feedback">
-          <div class="text-center">
-            <h2 class="text text-grey-000 feedback-title">好評回饋<span>Feedback</span></h2>
+        <h2 class="product-title text-primary-800">所有商品<span>Products</span></h2>
+        <div class="row">
+          <div class="col-md-2 product-menu">
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item product-nav">
+                <a class="nav-link active" href="#tab1" data-toggle="pill">
+                  <span class="material-symbols--star"></span>所有商品</a>
+              </li>
+              <li class="nav-item product-nav">
+                <a class="nav-link" href="#tab2" data-toggle="pill">
+                  <span class="codicon--sparkle"></span>新品上市</a>
+              </li>
+              <li class="nav-item product-nav">
+                <a class="nav-link" href="#tab3" data-toggle="pill">
+                  <span class="mdi--gift-outline"></span>節目限定</a>
+              </li>
+              <li class="nav-item product-nav">
+                <a class="nav-link" href="#tab4" data-toggle="pill">
+                  <span class="ic--outline-cake"></span>蛋糕專區</a>
+              </li>
+              <li class="nav-item product-nav">
+                <a class="nav-link" href="#tab5" data-toggle="pill">
+                  <span class="mynaui--cupcake"></span>
+                  甜點專區</a>
+              </li>
+            </ul>
           </div>
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-              <div class="card-feedback d-flex">
-                <img class="img-fluid rounded-circle card-img" src="/DessertStory/assets/feedback-p1-e7b52db9.png"
-                  alt="">
-                <div class="card-body" style="margin-left: 24px;">
-                  <div class="d-flex justify-content-between card-title">
-                    <div class="d-flex card-title-mb">
-                      <img class="img-fluid rounded-circle card-img-mb"
-                        src="/DessertStory/assets/feedback-p1-e7b52db9.png" alt="">
-                      <h5 class="card-name">Jessica</h5>
-                    </div>
-                    <h5 class="card-date">2024/9/22</h5>
-                  </div>
-                  <p class="card-text">藍莓乳酪蛋糕質地細膩,濃鬱的乳酪搭配酸甜適中的藍莓,帶來豐富的味覺享受,之後會想要回購。</p>
-                </div>
+          <div class="col-md-10">
+            <div class="tab-content">
+              <div id="tab1" class="tab-pane fade show active">
+                <div class="row" id="product-list-1"></div>
+              </div>
+              <div id="tab2" class="tab-pane fade">
+                <div class="row" id="product-list-2"></div>
+              </div>
+              <div id="tab3" class="tab-pane fade">
+                <div class="row" id="product-list-3"></div>
+              </div>
+              <div id="tab4" class="tab-pane fade">
+                <div class="row" id="product-list-4"></div>
+              </div>
+              <div id="tab5" class="tab-pane fade">
+                <div class="row" id="product-list-5"></div>
               </div>
             </div>
-            <div class="col">
-              <div class="card-feedback d-flex">
-                <img class="img-fluid rounded-circle card-img" src="/DessertStory/assets/feedback-p2-f492be70.png" alt="">
-                <div class="card-body" style="margin-left: 24px;">
-                  <div class="d-flex justify-content-between card-title">
-                    <div class="d-flex card-title-mb">
-                      <img class="img-fluid rounded-circle card-img-mb"
-                        src="/DessertStory/assets/feedback-p2-f492be70.png" alt="">
-                      <h5 class="card-name">Dianne</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feedback-bg" style="background-image: url(/DessertStory/assets/feedback_bg-93c7c297.png);">
+      <div class="feedback-blackimg" style="background-color: #00000066;">
+        <div class="container">
+          <div class="feedback">
+            <div class="text-center">
+              <h2 class="text text-grey-000 feedback-title">好評回饋<span>Feedback</span></h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <div class="col">
+                <div class="card-feedback d-flex">
+                  <img class="img-fluid rounded-circle card-img" src="/DessertStory/assets/feedback-p1-e7b52db9.png"
+                    alt="">
+                  <div class="card-body" style="margin-left: 24px;">
+                    <div class="d-flex justify-content-between card-title">
+                      <div class="d-flex card-title-mb">
+                        <img class="img-fluid rounded-circle card-img-mb"
+                          src="/DessertStory/assets/feedback-p1-e7b52db9.png" alt="">
+                        <h5 class="card-name">Jessica</h5>
+                      </div>
+                      <h5 class="card-date">2024/9/22</h5>
                     </div>
-                    <h5 class="card-date">2024/7/12</h5>
+                    <p class="card-text">藍莓乳酪蛋糕質地細膩,濃鬱的乳酪搭配酸甜適中的藍莓,帶來豐富的味覺享受,之後會想要回購。</p>
                   </div>
-                  <p class="card-text">因為朋友生兒訂購的提拉米蘇層次分明，咖啡與可可的完关結合，口密柔滑且甜度適中，所有朋友都超喜款。</p>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card-feedback d-flex">
-                <img class="img-fluid rounded-circle card-img" src="/DessertStory/assets/feedback-p3-a672a766.png" alt="">
-                <div class="card-body" style="margin-left: 24px;">
+              <div class="col">
+                <div class="card-feedback d-flex">
+                  <img class="img-fluid rounded-circle card-img" src="/DessertStory/assets/feedback-p2-f492be70.png"
+                    alt="">
+                  <div class="card-body" style="margin-left: 24px;">
+                    <div class="d-flex justify-content-between card-title">
+                      <div class="d-flex card-title-mb">
+                        <img class="img-fluid rounded-circle card-img-mb"
+                          src="/DessertStory/assets/feedback-p2-f492be70.png" alt="">
+                        <h5 class="card-name">Dianne</h5>
+                      </div>
+                      <h5 class="card-date">2024/7/12</h5>
+                    </div>
+                    <p class="card-text">因為朋友生兒訂購的提拉米蘇層次分明，咖啡與可可的完关結合，口密柔滑且甜度適中，所有朋友都超喜款。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card-feedback d-flex">
+                  <img class="img-fluid rounded-circle card-img" src="/DessertStory/assets/feedback-p3-a672a766.png"
+                    alt="">
+                  <div class="card-body" style="margin-left: 24px;">
                     <div class="d-flex justify-content-between card-title">
                       <div class="d-flex card-title-mb">
                         <img class="img-fluid rounded-circle card-img-mb"
                           src="/DessertStory/assets/feedback-p3-a672a766.png" alt="">
                         <h5 class="card-name">Judith</h5>
                       </div>
-                    <h5 class="card-date">2024/9/4</h5>
+                      <h5 class="card-date">2024/9/4</h5>
+                    </div>
+                    <p class="card-text">瑪德蓮鬆軟濕潤.奶香四溢，每一口都令人陶醉，也讓我和女友度過了一個美好下午茶時光。</p>
                   </div>
-                  <p class="card-text">瑪德蓮鬆軟濕潤.奶香四溢，每一口都令人陶醉，也讓我和女友度過了一個美好下午茶時光。</p>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="card-feedback d-flex">
-                <img class="img-fluid rounded-circle card-img" src="/DessertStory/assets/feedback-p4-c0f15da9.png" alt="">
-                <div class="card-body" style="margin-left: 24px;">
-                  <div class="d-flex justify-content-between card-title">
-                    <div class="d-flex card-title-mb">
-                      <img class="img-fluid rounded-circle card-img-mb"
-                        src="/DessertStory/assets/feedback-p4-c0f15da9.png" alt="">
-                      <h5 class="card-name">Tanya</h5>
+              <div class="col">
+                <div class="card-feedback d-flex">
+                  <img class="img-fluid rounded-circle card-img" src="/DessertStory/assets/feedback-p4-c0f15da9.png"
+                    alt="">
+                  <div class="card-body" style="margin-left: 24px;">
+                    <div class="d-flex justify-content-between card-title">
+                      <div class="d-flex card-title-mb">
+                        <img class="img-fluid rounded-circle card-img-mb"
+                          src="/DessertStory/assets/feedback-p4-c0f15da9.png" alt="">
+                        <h5 class="card-name">Tanya</h5>
+                      </div>
+                      <h5 class="card-date">2024/3/17</h5>
                     </div>
-                    <h5 class="card-date">2024/3/17</h5>
+                    <p class="card-text">鳳梨檸檬堪酸甜平𧗾.酥脆的塔皮與清新的果味交織，命人驚艷，我吃過最好吃的檸檬塔。</p>
                   </div>
-                  <p class="card-text">鳳梨檸檬堪酸甜平𧗾.酥脆的塔皮與清新的果味交織，命人驚艷，我吃過最好吃的檸檬塔。</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <footer class="footer">
+    </section>
+    <footer class="footer">
     <div class="container">
         <div class="d-flex justify-content-between mb-8 flex-column flex-md-row" style="align-items: center;">
         <img class="logowhite" src="/DessertStory/assets/Logo-White-80d6fe1e.png" alt="">
@@ -191,7 +239,11 @@
         <p class="company-mobile">甜點物語 ©甜點物語股份有限公司 | 統一編號12345678</p>
     </div>
 </footer>
-        
-</body>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+      
+      
+    </body>
 
 </html>
