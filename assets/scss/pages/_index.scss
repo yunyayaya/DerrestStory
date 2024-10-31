@@ -3,21 +3,27 @@ body{
 }
 //banner swiper
 .banner-swiper{
+  --swiper-navigation-size: 16px;
   position: relative;
   height: 100vh;
   @include media-breakpoint-up(md){
+    --swiper-navigation-size: 20px;
    height:auto;
   }
   @include media-breakpoint-up(lg){
+    --swiper-navigation-size: 24px;
    height:100vh;
   }
   .swiper-slide{
     background-color: $secondary-100;
+    display: flex;
+    justify-content: center;
   }
   .banner-swiper-button-prev, .banner-swiper-button-next{
     @include media-breakpoint-up(sm){
       width:32px;
       height:32px;
+      font-size:24px;
       color:$primary-100;
       background-color: #7d5a32;
       border-radius: 8px;
@@ -28,7 +34,7 @@ body{
     @include media-breakpoint-up(md){
       width:40px;
       height:40px;
-      top:30%;
+      top:50%;
       transform: translateY(-50%);
     }
     @include media-breakpoint-up(lg){
@@ -42,7 +48,7 @@ body{
     position: absolute;
     @include media-breakpoint-up(sm){
       left:50%;
-      bottom:25%;
+      bottom:48%;
       transform: translateX(-50%);
     }
     @include media-breakpoint-up(md){
@@ -56,6 +62,10 @@ body{
     }
     .swiper-pagination-bullet{
       margin: 0 16px;
+      background-color: $grey-000;
+    }
+    .swiper-pagination-bullet-active{
+      background-color: $primary-900;
     }
   }
   
@@ -87,11 +97,12 @@ body{
     background-position: right;
     height:100%;
     position: absolute;
-    top:63%;
+    top:30%;
     left:50%;
     transform: translate(-50%,-50%);
   }
   &-left{
+    display:none;
     @include media-breakpoint-up(xl){
       max-width: 1296px;
       display: block;
@@ -99,12 +110,13 @@ body{
       background-position: left;
       height:100%;
       position: absolute;
-      top:50%;
+      top:20%;
       left:50%;
       transform: translate(-50%,-50%);
     }
   }
   &-center{
+    display:none;
     @include media-breakpoint-up(xl){
       max-width: 1296px;
       display: block;
@@ -112,7 +124,7 @@ body{
       background-position: right;
       height:100%;
       position: absolute;
-      top:80%;
+      top:46%;
       left:50%;
       transform: translate(-50%,-50%);
     }
@@ -266,6 +278,7 @@ body{
 }
 
 .section-top-pick-swiper{
+  --swiper-navigation-size: 24px;
   height: 100%;
   padding-top: 248px;
   position: relative;
@@ -280,26 +293,34 @@ body{
   }
   .section-top-pick-swiper-pagination{
     position: absolute;
-    top:64%;
+    top:79%;
     transform: translateY(-50%);
     @media (min-width:500px){
-      top:66%;
+      top:81%;
     }
     @include media-breakpoint-up(sm){
-      top:68%;
+      top:80%;
     }
     @include media-breakpoint-up(md){
-      top:62%;
+      top:74%;
+    }
+    .swiper-pagination-bullet{
+      margin: 0 16px;
+      background-color: $primary-300;
+    }
+    .swiper-pagination-bullet-active{
+      background-color: $primary-900;
     }
   }
   .section-top-pick-swiper-button-prev, .section-top-pick-swiper-button-next{
     position: absolute;
-    top:65%;
+    top:71%;
+    color:$primary-900;
     @media (min-width:500px){
-      top:66%;
+      top:74%;
     }
     @include media-breakpoint-up(sm){
-      top:68%;
+      top:72%;
     }
     @include media-breakpoint-up(md){
       top:62%;
@@ -493,8 +514,11 @@ body{
 .section-dessert-story-content-cards-title{
   color:$grey-700;
   font-weight: 700;
-  font-size:30px;
+  font-size:24px;
   padding: 8px 0px;
+  @include media-breakpoint-up(lg){
+    font-size:30px;
+  }
 }
 .section-dessert-story-content-cards-text{
   font-size: 16px;
