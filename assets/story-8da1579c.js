@@ -1,0 +1,1 @@
+import"./main-36c65608.js";new Swiper(".swiper-control",{slidesPerView:"auto",spaceBetween:40,freeMode:!0,loop:!0,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},scrollbar:{el:".swiper-scrollbar",draggable:!0},autoplay:{delay:3e3,disableOnInteraction:!1}});console.log("Swiper initialized");
