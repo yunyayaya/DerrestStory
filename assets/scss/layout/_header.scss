@@ -7,6 +7,11 @@
 .navbar-nav {
   padding-top: 10px; /* 調整間距 */
 }
+.navbar-brand{
+  @include media-breakpoint-down(sm){
+    width:160px;
+  }
+}
 .ham-icon-btn:hover{
   background-color: $primary-600;
   width:40px;
@@ -27,6 +32,10 @@
   border: 1px solid $grey-400;
   border-radius: 8px;
   padding: 8px 24px 8px 16px;
+}
+.collapse {
+  transition: height 0.35s ease; /* 過渡效果的持續時間 */
+  height:0;
 }
 .nav-link-icon{
   padding-right:12px;
