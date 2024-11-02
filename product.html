@@ -6,114 +6,139 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products</title>
-  <script type="module" crossorigin src="/DessertStory/assets/product-30974986.js"></script>
-  <link rel="modulepreload" crossorigin href="/DessertStory/assets/main-a663b47f.js">
-  <link rel="stylesheet" href="/DessertStory/assets/main-be63a626.css">
+  <script type="module" crossorigin src="/DessertStory/assets/product-70ff213a.js"></script>
+  <link rel="modulepreload" crossorigin href="/DessertStory/assets/main-669cdc15.js">
+  <link rel="stylesheet" href="/DessertStory/assets/main-528d0461.css">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="/DessertStory/assets/Logo-Dark-5ac31d05.png" alt="品牌標誌"></a>
-        <div class="d-flex">
-            <div class="d-lg-block d-none" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="story.html">甜點故事</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="product.html">所有商品</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">最新消息</a>
-                  </li>
-                </ul>
-            </div>
-            <div class="navbar-icon d-flex">
-                <form class="d-flex">
-                    <div class="input-group">
-                        <button class="btn" type="submit"><i class="bi bi-search"></i></button>
-                        <input class="form-control me-2 search-box search-active" type="search" placeholder="Search" aria-label="Search">
-                    </div>
-                </form>
-                <a class="nav-link" href="#"><i class="bi bi-person fs-4 mx-3 d-lg-block d-none"></i></a>
-                <a class="nav-link" href="cart.html"><i class="bi bi-cart align-center fs-4 mx-3"></i></a>
-            </div>
-            <button class="navbar-toggler-lg ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse-lg" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">訂單列表</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">所有商品</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="story.html">甜點故事</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">最新消息</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">線上客服</a>
-                  </li>
-                </ul>
-              </div>
-        </div>   
-    </div>
-  </nav>    <section>
+  <div class="container container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="/DessertStory/assets/Logo-Dark-5ac31d05.png" alt="品牌標誌"></a>
+      <div class="d-flex dropdown align-items-center">
+          <div class="d-lg-block d-none" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link text-primary-900" aria-current="page" href="story.html">甜點故事</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary-900" href="product.html">所有商品</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary-900" href="#">最新消息</a>
+                </li>
+              </ul>
+          </div>
+          <div class="navbar-icon d-flex align-items-center">
+              <form class="d-flex">
+                  <div class="input-group">
+                      <button class="btn" type="submit"><i class="bi bi-search fs-5 text-primary-900"></i></button>
+                      <input class="form-control me-2 search-box search-active" type="search" placeholder="Search" aria-label="Search">
+                  </div>
+              </form>
+              <a class="nav-link" href="#"><i class="bi bi-person fs-4 mx-3 d-lg-block d-none text-primary-900"></i></a>
+              <a class="nav-link" href="cart.html"><i class="bi bi-cart fs-4 mx-3 mx-2-sm text-primary-900"></i></a>
+          </div>
+          <button class="navbar-toggler-lg btn ham-icon-btn d-flex justify-content-center align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span><i class="bi bi-list text-primary-900 ham-icon"></i></span>
+          </button>
+          <div class="collapse navbar-collapse-lg" id="navbarDropdown">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 dropdown-menu d-flex flex-column align-items-center">
+                <li class="nav-item">
+                  <a class="nav-link text-primary-900" aria-current="page" href="#"><span><i class="bi bi-card-list nav-link-icon"></i></span>訂單列表</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary-900" href="product.html"><span><i class="bi bi-cake nav-link-icon"></i></span>所有商品</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary-900" href="story.html"><span><i class="bi bi-journal-bookmark-fill nav-link-icon"></i></span>甜點故事</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary-900" href="#"><span><i class="bi bi-megaphone nav-link-icon"></i></span>最新消息</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary-900" href="#"><span><i class="bi bi-line nav-link-icon"></i></span>線上客服</a>
+                </li>
+              </ul>
+          </div>
+      </div>   
+  </div>
+</nav>    <section>
       <div class="container">
         <h2 class="product-title text-primary-800">所有商品<span>Products</span></h2>
         <div class="row">
-          <div class="col-md-2 product-menu">
-            <ul class="nav nav-pills flex-column">
-              <li class="nav-item product-nav">
+          <!-- 左側分類區域 -->
+          <div class="col-lg-2 col-md-1 product-menu-pc d-none d-md-block">
+            <ul class="nav nav-pills flex-column" id="category-list">
+              <li class="nav-item product-category" data-category="all">
                 <a class="nav-link active" href="#tab1" data-toggle="pill">
-                  <span class="material-symbols--star"></span>所有商品</a>
+                  <span class="material-symbols--star"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">所有商品</div>
+                </a>
               </li>
-              <li class="nav-item product-nav">
+              <li class="nav-item product-category" data-category="new">
                 <a class="nav-link" href="#tab2" data-toggle="pill">
-                  <span class="codicon--sparkle"></span>新品上市</a>
+                  <span class="codicon--sparkle"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">新品上市</div>
+                </a>
               </li>
-              <li class="nav-item product-nav">
+              <li class="nav-item product-category" data-category="festival">
                 <a class="nav-link" href="#tab3" data-toggle="pill">
-                  <span class="mdi--gift-outline"></span>節目限定</a>
+                  <span class="mdi--gift-outline"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">節日限定</div>
+                </a>
               </li>
-              <li class="nav-item product-nav">
+              <li class="nav-item product-category" data-category="cake">
                 <a class="nav-link" href="#tab4" data-toggle="pill">
-                  <span class="ic--outline-cake"></span>蛋糕專區</a>
+                  <span class="ic--outline-cake"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">蛋糕專區</div>
+                </a>
               </li>
-              <li class="nav-item product-nav">
+              <li class="nav-item product-category" data-category="dessert">
                 <a class="nav-link" href="#tab5" data-toggle="pill">
                   <span class="mynaui--cupcake"></span>
-                  甜點專區</a>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">甜點專區</div>
+                </a>
               </li>
             </ul>
           </div>
-          <div class="col-md-10">
-            <div class="tab-content">
-              <div id="tab1" class="tab-pane fade show active">
-                <div class="row" id="product-list-1"></div>
-              </div>
-              <div id="tab2" class="tab-pane fade">
-                <div class="row" id="product-list-2"></div>
-              </div>
-              <div id="tab3" class="tab-pane fade">
-                <div class="row" id="product-list-3"></div>
-              </div>
-              <div id="tab4" class="tab-pane fade">
-                <div class="row" id="product-list-4"></div>
-              </div>
-              <div id="tab5" class="tab-pane fade">
-                <div class="row" id="product-list-5"></div>
-              </div>
+          <!-- 手機版轉為下拉模式 -->
+          <div class="dropdown product-menu-mb w-100 d-block d-md-none" style="margin-bottom: 24px;">
+            <button class="btn btn-primary-600 text-primary-100 dropdown-toggle " style="border-radius: 8px;"
+              type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              所有商品
+            </button>
+            <div class="dropdown-menu bg-primary-100 border-primary-700" style="text-align: center;"
+              aria-labelledby="categoryDropdown" id="category-list">
+              <a class="dropdown-item text-primary-900 product-category active" href="#tab1" data-category="all">
+                所有商品
+              </a>
+              <a class="dropdown-item text-primary-900 product-category" href="#tab2" data-category="new">
+                新品上市
+              </a>
+              <a class="dropdown-item text-primary-900 product-category" href="#tab3" data-category="festival">
+                節日限定
+              </a>
+              <a class="dropdown-item text-primary-900 product-category" href="#tab4" data-category="cake">
+                蛋糕專區
+              </a>
+              <a class="dropdown-item text-primary-900 product-category" href="#tab5" data-category="dessert">
+                甜點專區
+              </a>
             </div>
           </div>
+
+          <!-- 商品展示區域 -->
+          <div class="col-lg-10 col-md-11 right-content">
+            <div id="product-list" class="row"></div>
+            <!-- 分頁按鈕 -->
+            <div id="pagination" class="d-flex justify-content-center custom-pages"></div>
+          </div>
         </div>
+
       </div>
     </section>
+    
     <section class="feedback-bg" style="background-image: url(/DessertStory/assets/feedback_bg-93c7c297.png);">
       <div class="feedback-blackimg" style="background-color: #00000066;">
         <div class="container">
@@ -243,7 +268,7 @@
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
       
-      
-    </body>
+
+</body>
 
 </html>
