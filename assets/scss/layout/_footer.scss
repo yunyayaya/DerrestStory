@@ -57,6 +57,12 @@ ul{
   max-width:212px;
 }
 
+.footer-hoverstyle:hover{
+  text-decoration: underline;
+  text-decoration-color: #FCFCFC;
+  // text-decoration-thickness: 2px;
+}
+
 //平版樣式
 @media (max-width:768px) {
   .btnmargin{
