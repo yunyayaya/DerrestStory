@@ -16,16 +16,16 @@
               </ul>
           </div>
           <div class="navbar-icon d-flex align-items-center">
-              <form class="d-flex">
+              <form class="d-flex" id="searchForm">
                   <div class="input-group">
-                      <button class="btn" type="submit"><i class="bi bi-search fs-5 text-primary-900"></i></button>
+                      <button class="btn" type="button" id="searchButton"><i class="bi bi-search fs-5 text-primary-900"></i></button>
                       <input class="form-control me-2 search-box search-active" type="search" placeholder="Search" aria-label="Search">
                   </div>
               </form>
               <a class="nav-link" href="#"><i class="bi bi-person fs-4 mx-3 d-lg-block d-none text-primary-900"></i></a>
               <a class="nav-link" href="cart.html"><i class="bi bi-cart fs-4 mx-3 mx-2-sm text-primary-900"></i></a>
           </div>
-          <button class="navbar-toggler-lg btn ham-icon-btn d-flex justify-content-center align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler-lg btn ham-icon-btn d-flex justify-content-center align-items-center" type="button" data-bs-target="#navbarDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span><i class="bi bi-list text-primary-900 ham-icon"></i></span>
           </button>
           <div class="collapse navbar-collapse-lg" id="navbarDropdown">
@@ -50,3 +50,27 @@
       </div>   
   </div>
 </nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbarDropdown = document.getElementById('navbarDropdown');
+    const hamIconBtn = document.querySelector('.ham-icon-btn');
+
+    hamIconBtn.addEventListener('click', function () {
+        // 如果選單已顯示，隱藏選單並更新按鈕屬性
+        if (navbarDropdown.classList.contains('show')) {
+            navbarDropdown.classList.remove('show');
+            navbarDropdown.classList.add('collapse');
+            hamIconBtn.setAttribute('aria-expanded', 'false');
+        } else {
+            // 如果選單隱藏，顯示選單並更新按鈕屬性
+            navbarDropdown.classList.remove('collapse');
+            navbarDropdown.classList.add('show');
+            hamIconBtn.setAttribute('aria-expanded', 'true');
+        }
+    });
+  });
+
+  document.getElementById("searchButton").addEventListener("click", function() {
+  document.getElementById("searchForm").classList.toggle("search-active");
+  });
+</script>
