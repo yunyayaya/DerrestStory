@@ -2,101 +2,177 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products</title>
 </head>
 
 <body>
-    <%- include('./layout/header'); -%>
-        <section>
-            <div class="container">
-                <h2 class="product-title text-primary-800">所有商品<span>Products</span></h2>
-                <div class="row">
-                    <!-- 左側分類區域 -->
-                    <div class="col-lg-2 col-md-1 product-menu-pc d-none d-md-block">
-                        <ul class="nav nav-pills flex-column" id="category-list">
-                            <li class="nav-item product-category" data-category="all">
-                                <a class="nav-link active" href="#tab1" data-toggle="pill">
-                                    <span class="material-symbols--star"></span>
-                                    <div class="d-none d-lg-block" style="margin-left: 16px;">所有商品</div>
-                                </a>
-                            </li>
-                            <li class="nav-item product-category" data-category="new">
-                                <a class="nav-link" href="#tab2" data-toggle="pill">
-                                    <span class="codicon--sparkle"></span>
-                                    <div class="d-none d-lg-block" style="margin-left: 16px;">新品上市</div>
-                                </a>
-                            </li>
-                            <li class="nav-item product-category" data-category="festival">
-                                <a class="nav-link" href="#tab3" data-toggle="pill">
-                                    <span class="mdi--gift-outline"></span>
-                                    <div class="d-none d-lg-block" style="margin-left: 16px;">節日限定</div>
-                                </a>
-                            </li>
-                            <li class="nav-item product-category" data-category="cake">
-                                <a class="nav-link" href="#tab4" data-toggle="pill">
-                                    <span class="ic--outline-cake"></span>
-                                    <div class="d-none d-lg-block" style="margin-left: 16px;">蛋糕專區</div>
-                                </a>
-                            </li>
-                            <li class="nav-item product-category" data-category="dessert">
-                                <a class="nav-link" href="#tab5" data-toggle="pill">
-                                    <span class="mynaui--cupcake"></span>
-                                    <div class="d-none d-lg-block" style="margin-left: 16px;">甜點專區</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- 手機版轉為下拉模式 -->
-                    <div class="dropdown product-menu-mb w-100 d-block d-md-none" style="margin-bottom: 24px;">
-                        <button class="btn btn-primary-600 text-primary-100 dropdown-toggle "
-                            style="border-radius: 8px;" type="button" id="categoryDropdown" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            所有商品
-                        </button>
-                        <div class="dropdown-menu bg-primary-100 border-primary-700" style="text-align: center;"
-                            aria-labelledby="categoryDropdown" id="category-list">
-                            <a class="dropdown-item text-primary-900 product-category active" href="#tab1"
-                                data-category="all">
-                                所有商品
-                            </a>
-                            <a class="dropdown-item text-primary-900 product-category" href="#tab2" data-category="new">
-                                新品上市
-                            </a>
-                            <a class="dropdown-item text-primary-900 product-category" href="#tab3"
-                                data-category="festival">
-                                節日限定
-                            </a>
-                            <a class="dropdown-item text-primary-900 product-category" href="#tab4"
-                                data-category="cake">
-                                蛋糕專區
-                            </a>
-                            <a class="dropdown-item text-primary-900 product-category" href="#tab5"
-                                data-category="dessert">
-                                甜點專區
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- 商品展示區域 -->
-                    <div class="col-lg-10 col-md-11 right-content">
-                        <div id="product-list" class="row"></div>
-                        <!-- 分頁按鈕 -->
-                        <div id="pagination" class="d-flex justify-content-center custom-pages"></div>
-                    </div>
-                </div>
-
+  <%- include('./layout/header'); -%>
+    <section>
+      <div class="container">
+        <h2 class="product-title text-primary-800">所有商品<span>Products</span></h2>
+        <div class="row">
+          <!-- 左側分類區域 -->
+          <div class="col-lg-2 col-md-1 product-menu-pc d-none d-md-block">
+            <ul class="nav nav-pills flex-column" id="category-list">
+              <li class="nav-item product-category" data-category="all">
+                <a class="nav-link active" href="#tab1" data-toggle="pill">
+                  <span class="material-symbols--star"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">所有商品</div>
+                </a>
+              </li>
+              <li class="nav-item product-category" data-category="new">
+                <a class="nav-link" href="#tab2" data-toggle="pill">
+                  <span class="codicon--sparkle"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">新品上市</div>
+                </a>
+              </li>
+              <li class="nav-item product-category" data-category="festival">
+                <a class="nav-link" href="#tab3" data-toggle="pill">
+                  <span class="mdi--gift-outline"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">節日限定</div>
+                </a>
+              </li>
+              <li class="nav-item product-category" data-category="cake">
+                <a class="nav-link" href="#tab4" data-toggle="pill">
+                  <span class="ic--outline-cake"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">蛋糕專區</div>
+                </a>
+              </li>
+              <li class="nav-item product-category" data-category="dessert">
+                <a class="nav-link" href="#tab5" data-toggle="pill">
+                  <span class="mynaui--cupcake"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">甜點專區</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- 手機版轉為下拉模式 -->
+          <div class="dropdown product-menu-mb w-100 d-block d-md-none" style="margin-bottom: 24px;">
+            <button class="btn btn-primary-600 text-primary-100 dropdown-toggle " style="border-radius: 8px;"
+              type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              所有商品
+            </button>
+            <div class="dropdown-menu bg-primary-100 border-primary-700" style="text-align: center;"
+              aria-labelledby="categoryDropdown" id="category-list">
+              <a class="dropdown-item text-primary-900 product-category active" href="#tab1" data-category="all">
+                所有商品
+              </a>
+              <a class="dropdown-item text-primary-900 product-category" href="#tab2" data-category="new">
+                新品上市
+              </a>
+              <a class="dropdown-item text-primary-900 product-category" href="#tab3" data-category="festival">
+                節日限定
+              </a>
+              <a class="dropdown-item text-primary-900 product-category" href="#tab4" data-category="cake">
+                蛋糕專區
+              </a>
+              <a class="dropdown-item text-primary-900 product-category" href="#tab5" data-category="dessert">
+                甜點專區
+              </a>
             </div>
-        </section>
+          </div>
 
-        <%- include('./layout/footer'); -%>
+          <!-- 商品展示區域 -->
+          <div class="col-lg-10 col-md-11 right-content">
+            <div id="product-list" class="row"></div>
+            <!-- 分頁按鈕 -->
+            <div id="pagination" class="d-flex justify-content-center custom-pages"></div>
+          </div>
+        </div>
 
-            <script type="module" src="../main.js"></script>
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-            <script type="module" src="../assets/js/product.js"></script>
+      </div>
+    </section>
+    
+    <section class="feedback-bg" style="background-image: url(../assets/images/img_product/feedback_bg.png);">
+      <div class="feedback-blackimg" style="background-color: #00000066;">
+        <div class="container">
+          <div class="feedback">
+            <div class="text-center">
+              <h2 class="text text-grey-000 feedback-title">好評回饋<span>Feedback</span></h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <div class="col">
+                <div class="card-feedback d-flex">
+                  <img class="img-fluid rounded-circle card-img" src="../assets/images/img_product/feedback-p1.png"
+                    alt="">
+                  <div class="card-body" style="margin-left: 24px;">
+                    <div class="d-flex justify-content-between card-title">
+                      <div class="d-flex card-title-mb">
+                        <img class="img-fluid rounded-circle card-img-mb"
+                          src="../assets/images/img_product/feedback-p1.png" alt="">
+                        <h5 class="card-name">Jessica</h5>
+                      </div>
+                      <h5 class="card-date">2024/9/22</h5>
+                    </div>
+                    <p class="card-text">藍莓乳酪蛋糕質地細膩,濃鬱的乳酪搭配酸甜適中的藍莓,帶來豐富的味覺享受,之後會想要回購。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card-feedback d-flex">
+                  <img class="img-fluid rounded-circle card-img" src="../assets/images/img_product/feedback-p2.png"
+                    alt="">
+                  <div class="card-body" style="margin-left: 24px;">
+                    <div class="d-flex justify-content-between card-title">
+                      <div class="d-flex card-title-mb">
+                        <img class="img-fluid rounded-circle card-img-mb"
+                          src="../assets/images/img_product/feedback-p2.png" alt="">
+                        <h5 class="card-name">Dianne</h5>
+                      </div>
+                      <h5 class="card-date">2024/7/12</h5>
+                    </div>
+                    <p class="card-text">因為朋友生兒訂購的提拉米蘇層次分明，咖啡與可可的完关結合，口密柔滑且甜度適中，所有朋友都超喜款。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card-feedback d-flex">
+                  <img class="img-fluid rounded-circle card-img" src="../assets/images/img_product/feedback-p3.png"
+                    alt="">
+                  <div class="card-body" style="margin-left: 24px;">
+                    <div class="d-flex justify-content-between card-title">
+                      <div class="d-flex card-title-mb">
+                        <img class="img-fluid rounded-circle card-img-mb"
+                          src="../assets/images/img_product/feedback-p3.png" alt="">
+                        <h5 class="card-name">Judith</h5>
+                      </div>
+                      <h5 class="card-date">2024/9/4</h5>
+                    </div>
+                    <p class="card-text">瑪德蓮鬆軟濕潤.奶香四溢，每一口都令人陶醉，也讓我和女友度過了一個美好下午茶時光。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card-feedback d-flex">
+                  <img class="img-fluid rounded-circle card-img" src="../assets/images/img_product/feedback-p4.png"
+                    alt="">
+                  <div class="card-body" style="margin-left: 24px;">
+                    <div class="d-flex justify-content-between card-title">
+                      <div class="d-flex card-title-mb">
+                        <img class="img-fluid rounded-circle card-img-mb"
+                          src="../assets/images/img_product/feedback-p4.png" alt="">
+                        <h5 class="card-name">Tanya</h5>
+                      </div>
+                      <h5 class="card-date">2024/3/17</h5>
+                    </div>
+                    <p class="card-text">鳳梨檸檬堪酸甜平𧗾.酥脆的塔皮與清新的果味交織，命人驚艷，我吃過最好吃的檸檬塔。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include('./layout/footer'); -%>
+
+      <script type="module" src="../main.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+      <script type="module" src="../assets/js/product.js"></script>
 
 </body>
 
