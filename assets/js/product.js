@@ -26,10 +26,15 @@ function loadProducts(page = 1) {
     const productList = document.getElementById("product-list");
     productList.innerHTML = ""; // 清空商品區域
 
+    // 根據裝置設定每頁顯示的商品數
+    const productsPerPage = window.innerWidth <= 768 ? 6 : 9; // 手機板顯示 6 個，電腦板顯示 9 個
+
     // 根據分類篩選商品
     const filteredProducts = currentCategory === "all"
         ? products
         : products.filter(product => product.category.includes(currentCategory));
+
+
 
     // 計算當前頁要顯示的商品範圍
     const start = (page - 1) * productsPerPage;
@@ -41,12 +46,11 @@ function loadProducts(page = 1) {
         const productItem = document.createElement("div");
         productItem.classList.add("col-lg-4", "col-md-6", "col-12", "mb-4");
 
+       
         // 生成規格選擇
         const specsOptions = product.specs.map(spec =>
             `<option value="${product.price[spec]}">${spec}</option>`
         ).join('');
-
-
 
         productItem.innerHTML = `
       <div class="card border border-primary-700 h-100" style="overflow: hidden;">
@@ -190,7 +194,7 @@ $(document).ready(function () {
         if ($(this).find('span.ic--outline-cake').length) {
             $(this).find('span.ic--outline-cake').addClass('ic--baseline-cake');
         }
-        //節目限定
+        //節日限定
         if ($(this).find('span.mdi--gift-outline').length) {
             $(this).find('span.mdi--gift-outline').addClass('mdi--gift');
         }
@@ -285,5 +289,5 @@ function setupCategoryFilter() {
 document.addEventListener("DOMContentLoaded", () => {
     loadProducts();
     setupCategoryFilter();
-
+    window.addEventListener("resize", () => loadProducts(currentPage));
 });
