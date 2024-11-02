@@ -14,53 +14,78 @@
       <div class="container">
         <h2 class="product-title text-primary-800">所有商品<span>Products</span></h2>
         <div class="row">
-          <div class="col-md-2 product-menu">
-            <ul class="nav nav-pills flex-column">
-              <li class="nav-item product-nav">
+          <!-- 左側分類區域 -->
+          <div class="col-lg-2 col-md-1 product-menu-pc d-none d-md-block">
+            <ul class="nav nav-pills flex-column" id="category-list">
+              <li class="nav-item product-category" data-category="all">
                 <a class="nav-link active" href="#tab1" data-toggle="pill">
-                  <span class="material-symbols--star"></span>所有商品</a>
+                  <span class="material-symbols--star"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">所有商品</div>
+                </a>
               </li>
-              <li class="nav-item product-nav">
+              <li class="nav-item product-category" data-category="new">
                 <a class="nav-link" href="#tab2" data-toggle="pill">
-                  <span class="codicon--sparkle"></span>新品上市</a>
+                  <span class="codicon--sparkle"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">新品上市</div>
+                </a>
               </li>
-              <li class="nav-item product-nav">
+              <li class="nav-item product-category" data-category="festival">
                 <a class="nav-link" href="#tab3" data-toggle="pill">
-                  <span class="mdi--gift-outline"></span>節目限定</a>
+                  <span class="mdi--gift-outline"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">節日限定</div>
+                </a>
               </li>
-              <li class="nav-item product-nav">
+              <li class="nav-item product-category" data-category="cake">
                 <a class="nav-link" href="#tab4" data-toggle="pill">
-                  <span class="ic--outline-cake"></span>蛋糕專區</a>
+                  <span class="ic--outline-cake"></span>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">蛋糕專區</div>
+                </a>
               </li>
-              <li class="nav-item product-nav">
+              <li class="nav-item product-category" data-category="dessert">
                 <a class="nav-link" href="#tab5" data-toggle="pill">
                   <span class="mynaui--cupcake"></span>
-                  甜點專區</a>
+                  <div class="d-none d-lg-block" style="margin-left: 16px;">甜點專區</div>
+                </a>
               </li>
             </ul>
           </div>
-          <div class="col-md-10">
-            <div class="tab-content">
-              <div id="tab1" class="tab-pane fade show active">
-                <div class="row" id="product-list-1"></div>
-              </div>
-              <div id="tab2" class="tab-pane fade">
-                <div class="row" id="product-list-2"></div>
-              </div>
-              <div id="tab3" class="tab-pane fade">
-                <div class="row" id="product-list-3"></div>
-              </div>
-              <div id="tab4" class="tab-pane fade">
-                <div class="row" id="product-list-4"></div>
-              </div>
-              <div id="tab5" class="tab-pane fade">
-                <div class="row" id="product-list-5"></div>
-              </div>
+          <!-- 手機版轉為下拉模式 -->
+          <div class="dropdown product-menu-mb w-100 d-block d-md-none" style="margin-bottom: 24px;">
+            <button class="btn btn-primary-600 text-primary-100 dropdown-toggle " style="border-radius: 8px;"
+              type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              所有商品
+            </button>
+            <div class="dropdown-menu bg-primary-100 border-primary-700" style="text-align: center;"
+              aria-labelledby="categoryDropdown" id="category-list">
+              <a class="dropdown-item text-primary-900 product-category active" href="#tab1" data-category="all">
+                所有商品
+              </a>
+              <a class="dropdown-item text-primary-900 product-category" href="#tab2" data-category="new">
+                新品上市
+              </a>
+              <a class="dropdown-item text-primary-900 product-category" href="#tab3" data-category="festival">
+                節日限定
+              </a>
+              <a class="dropdown-item text-primary-900 product-category" href="#tab4" data-category="cake">
+                蛋糕專區
+              </a>
+              <a class="dropdown-item text-primary-900 product-category" href="#tab5" data-category="dessert">
+                甜點專區
+              </a>
             </div>
           </div>
+
+          <!-- 商品展示區域 -->
+          <div class="col-lg-10 col-md-11 right-content">
+            <div id="product-list" class="row"></div>
+            <!-- 分頁按鈕 -->
+            <div id="pagination" class="d-flex justify-content-center custom-pages"></div>
+          </div>
         </div>
+
       </div>
     </section>
+    
     <section class="feedback-bg" style="background-image: url(../assets/images/img_product/feedback_bg.png);">
       <div class="feedback-blackimg" style="background-color: #00000066;">
         <div class="container">
@@ -148,7 +173,7 @@
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
       <script type="module" src="../assets/js/product.js"></script>
-      
-    </body>
+
+</body>
 
 </html>
