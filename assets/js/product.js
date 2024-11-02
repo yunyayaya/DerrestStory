@@ -51,7 +51,7 @@ function loadProducts(page = 1) {
         productItem.innerHTML = `
       <div class="card border border-primary-700 h-100" style="overflow: hidden;">
           <div class="position-relative">
-              <img src="${import.meta.env.BASE_URL}assets/images/img_product/${product.img}" class="card-img-top product-card-img" style="height: 240px; object-fit: cover;" alt="${product.name}">
+              <img src="https://raw.githubusercontent.com/yunyayaya/DessertStory/refs/heads/main/assets/images/img_product/${product.img}" class="card-img-top product-card-img" style="height: 240px; object-fit: cover;" alt="${product.name}">
               <button class="btn btn-grey-000 text-grey-700 border border-grey-400 rounded-circle add-to-cart d-block d-sm-none" style="width: 40px; height: 40px; padding: 0; position: absolute; top: 80%; right: 5%;"  data-id="${product.id}">
                   <i class="bi bi-plus" style="font-size: 1.5rem;"></i>
               </button>
